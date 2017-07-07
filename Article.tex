@@ -254,28 +254,26 @@ We prove in the sequel the existence and the uniqueness of a Chebyshev net $\var
   \varphi(0,v)=\gamma_v(v),\quad\forall v\in[0,L_v].
 \end{split}
 \end{equation}
-Since $\surf$ is a plane immersion, we identify in the sequel $\surf=(\R^2,g)$. We moreover suppose that the metric $g$ satisfies the following property: for all compact set $W\subset\surf$, there exists $\Csurf>1$ such that 
+Since $\surf$ is a plane immersion, and since $\int_\surf{K^+}<2\pi$
+and $\int_\surf{K^-}<\infty$, there exists a global bi-Lipschitz
+parametrization of $\surf$~\cite{Bonk03}. In the sequel, we identify
+$\surf=(\R^2,g)$. The metric $g$ satisfies the following property:
+there exists $\Csurf>1$ such that for all $X\in\R^2$,
 \begin{equation}\label{eq:equiv}
-  |X|_{g(p)} \leq \Csurf|X|,
+  \frac{1}{\Csurf}|X|\leq |X|_{g} \leq \Csurf|X|.
 \end{equation}
-for all $p\in W$ and $X\in\R^2$. Unless explicitly mentionned, all the considered curves are assumed to be arc-length parametrized. Then, the geodesic curvature $\ko_{\sigma}:I\subset\R\to\R$ of a curve $\sigma:I\to\surf$ is defined by
-\begin{equation}\label{eq:geod-dual1}
-   \ko_{\sigma} = \langle\sigma^{\prime\prime},\sigma^{\prime\perp}\rangle_g,
-\end{equation}
-where $\sigma^{\prime\perp}$ is the direct $\frac{\pi}{2}$-rotation of $\sigma'$. In the sequel, $C$ and $\tilde C$ are two generic constants whose values can change at each occurrence and we will often explicit their dependence.
+Unless explicitly mentioned, all the considered curves are assumed to be arc-length parametrized. In the sequel, $C$ and $\tilde C$ are two generic constants whose values can change at each occurrence and we will often explicit their dependence.
 
-Following \cite{Ghys09}, we reformulate the problem of finding a Chebyshev net $\varphi:D\to\surf$ as the problem of finding the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves defined by $\omega(u,v) = \angle(\DU\varphi, \DV\varphi)(u,v)$. With this purpose in mind, we observe that $\omega$ satisfies the following integrability condition (in the form of a modified Sine-Gordon equation) \cite{Ghys09}
+Following \cite{Ghys09}, we reformulate the problem of finding a Chebyshev net $\varphi:D\to\surf$ as the problem of finding the angle distribution $\omega:D\to(0,\pi)$ between the coordinate curves defined by $\omega(u,v) = \angle(\DU\varphi, \DV\varphi)(u,v)$. With this purpose in mind, we observe that $\omega$ satisfies the following integrability condition (in the form of a modified Sine-Gordon equation) \cite{Ghys09}
 \begin{equation}  \label{eq:cond-integr}
   \DUV \omega = -K(\varphi) \sin(\omega).
 \end{equation}
 Equivalently, $\omega$ satisfies the integrated form of \eqref{eq:cond-integr} called the Hazzidakis formula
-\begin{equation}  \label{eq:hazz-form}
-\begin{split}
- \omega(u,v) =& ~~\angle\big(\gamma_u'(0),\gamma_v'(0)\big) - \int_0^u \ko_u(s)ds +
+\begin{multline}  \label{eq:hazz-form}
+ \omega(u,v) = \angle\big(\gamma_u'(0),\gamma_v'(0)\big) - \int_0^u \ko_u(s)ds +
   \int_{0}^v\ko_v(s)ds\\
-& - \int_0^u\int_0^vK(\varphi(s,t))\sin\big[\omega(s,t)\big]ds~dt,
-\end{split}
-\end{equation} 
+ - \int_0^u\int_0^vK(\varphi(s,t))\sin\big[\omega(s,t)\big]ds~dt,
+\end{multline} 
 for all $(u,v)\in D$, with $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$ the geodesic curvatures of $\gamma_u$ and $\gamma_v$ respectively (see Figure \ref{fig:hazz-primal-c4}). 
 \begin{figure}[!htp]
   \centering
@@ -310,7 +308,8 @@ for all $(u,v)\in D$, with $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$ the geo
   \end{tikzpicture}
   \caption{Illustration of the coordinate curves of a Chebyshev net $\varphi$}\label{fig:hazz-primal-c4}
 \end{figure}
-We moreover remark that, since $\varphi$ is a Chebyshev net, it satisfies the following property:
+
+Moreover, remark that, since $\varphi$ is a Chebyshev net, it satisfies the following property:
 \begin{subequations}\label{eq:courb-geod}
 \begin{align}\label{eq:courb-geoda}
 \kop_u(u,v) &= -\partial_u\omega(u,v), \\\label{eq:courb-geodb}
@@ -324,8 +323,15 @@ for all $(u,v)\in D$, where $\kop_u:D\to\R$ and $\kop_v:D\to\R$ are respectively
 \omega(0,v) &= \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds,\quad\forall v\in[0,L_v].
 \end{align}
 \end{subequations}
-We will first show that we can associate with any angle distribution $\omega:D\to(0,\pi)$ satisfying \eqref{eq:cond-bord-angle} a unique mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3}, and \eqref{eq:courb-geodb}, and then we will show that this mapping also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. This section aims at proving the following result:
-\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2inexact}
+We first show that we can associate to any angle distribution
+$\omega:D\to(0,\pi)$ satisfying \eqref{eq:cond-bord-angle} a unique
+mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying
+\eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3}, and
+\eqref{eq:courb-geodb}. We then show that this mapping also satisfies
+\eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$
+satisfies the integrability condition \eqref{eq:cond-integr}. This
+section aims at proving the following result:
+\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2full}
 Let $\surf$ be a smooth, open, complete, and simply connected
 surface. Let $\gamma_u:\R^+\to\surf$ and $\gamma_v:\R^+\to\surf$ be
 two smooth curves with respective geodesic curvatures $\ko_u:\R^+\to\R$ and
@@ -335,8 +341,8 @@ the sector $\Omega$ delimited by $\gamma_u$ and $\gamma_v$
 verifies \[\int_{\gamma_u}{\ko_u^+} + \int_{\gamma_v}{\ko_v^-} +
 \int_{\Omega}{K^+}<\pi-\psi \text{ and } \int_{\gamma_u}{\ko_u^-} +
 \int_{\gamma_v}{\ko_v^+} + \int_{\Omega}{K^-}<\psi.\] Let
-$L_u,L_v\in\R_\ast^+$ and $D=[0,L_u]\Times[0,L_v]$. Then, there exists
-a unique angle distribution $\omega:D\to(o,\pi)$ verifying the
+$L_u,L_v\in\R_\ast^+\cup\{+\infty\}$ and $D=[0,L_u]\Times[0,L_v]$. Then, there exists
+a unique angle distribution $\omega:D\to(0,\pi)$ verifying the
 boundary conditions \eqref{eq:cond-bord-angle} and satisfying the
 Hazzidakis formula \eqref{eq:hazz-form}, with
 $\varphi:=\I(\gamma,\omega): D\to\surf$ the unique mapping satisfying
@@ -344,14 +350,10 @@ $\varphi:=\I(\gamma,\omega): D\to\surf$ the unique mapping satisfying
 \eqref{eq:courb-geodb}. The mapping $\varphi$ is a smooth Chebyshev net on
 $\Omega$ with angles $0<\omega<\pi$.
 \end{theorem}
-In the previous statement, we have not defined precisely the regularity of the objects or the norms on the considered vector spaces. These are defined in Section \ref{sec:norms}, and a more accurate statement of Theorem \ref{thm2inexact} is given by Theorem \ref{thm2}. A direct consequence of Theorem \ref{thm2} is the following theorem:
-\begin{theorem}[Existence of a unique solution to integrability condition]
-  Let $\surf$ be a smooth, open, complete, and simply connected surface. Let $\gamma_u:[0,L_u]\to\surf$, with $L_u\in\R_\ast^+\cup\{\infty\}$, and $\gamma_v:[0,L_v]\to\surf$, with $L_v\in\R_\ast^+\cup\{\infty\}$, be two smooth curves with respective geodesic curvatures $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose that $\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:D\to\R/2\pi\Z$, with $D=[0,L_u]\Times [0,L_v]$, verifying the boundary conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega): D\to\surf$ the unique mapping satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}.
 
-  Suppose moreover that there exists $\tilde D=[0,\tilde L_u]\Times[0,\tilde L_v]$, with $\tilde L_u\in(0,L_u]$ and $\tilde L_v\in(0,L_v]$, such that $0<\omega(u,v)<\pi$, for all $(u,v)\in \tilde D$. Then, the mapping $\varphi\big|_{\tilde D}$ is a Chebyshev nets, that is, it satisfies \eqref{eq:cheb-def-c3} for all $(u,v)\in \tilde D$.
-\end{theorem}
 
-In order to prove Theorem \ref{thm2}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
+
+In order to prove Theorem \ref{thm2full}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
 
 \subsection{Functional spaces and statement of the main result}\label{sec:norms}
 
@@ -1137,7 +1139,7 @@ We now prove the following result:
 \end{equation}
 where the constant $C$ depends on $\RR(\gamma)$ and $\RR(\sigma)$. Note that \eqref{eq:lips-F} holds for all $L\in(0,L_v]$ and $\gamma,\sigma\in\Gamma^{2}([0,L_u])\Times\Gamma^{2}([0,L_v])$.}
 
-In this step, the domain of definition of the two-dimensional variables for the different norms is always $D_L=[0,L_u]\Times[0,L]$ and will not be specified. In all the subsequent estimates, unless explicitly mentionned, the constants only depend on $\RR(\gamma)$ and $\RR(\sigma)$. We set $\varphi_\sigma := \I(\sigma,\omega_\sigma)\in\Phi^{1,2}$ and we denote $\ko_{u,2}\in C^0([0,L_u])$ and $\ko_{v,2}\in C^0([0,L_v])$ the geodesic curvatures of $\sigma_u$ and $\sigma_v$, respectively. First, we prove that
+In this step, the domain of definition of the two-dimensional variables for the different norms is always $D_L=[0,L_u]\Times[0,L]$ and will not be specified. In all the subsequent estimates, unless explicitly mentioned, the constants only depend on $\RR(\gamma)$ and $\RR(\sigma)$. We set $\varphi_\sigma := \I(\sigma,\omega_\sigma)\in\Phi^{1,2}$ and we denote $\ko_{u,2}\in C^0([0,L_u])$ and $\ko_{v,2}\in C^0([0,L_v])$ the geodesic curvatures of $\sigma_u$ and $\sigma_v$, respectively. First, we prove that
 \begin{subequations}\label{eq:lips-F1}
 \begin{align}\label{eq:lips-F11}
 \|F(\omega_\gamma)-F(\omega_\sigma)\|_{\Theta^0}&\leq \tilde C\Big(\|\gamma_u-\sigma_u\|_{\Gamma^2([0,L_u])} + \|\gamma_v-\sigma_v\|_{\Gamma^2([0,L_v])} + L\|\omega_\gamma-\omega_\sigma\|_{\Theta^1}\Big),\\

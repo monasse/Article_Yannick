@@ -206,7 +206,7 @@
 
 \modif{Théorème final}
 \begin{theorem}[Existence of a smooth Chebyshev net out of a finite
-    number of balls]\label{thm:existence-cheb-net}
+    number of balls]\label{thm:main_thm}
   Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$ satisfying
 \begin{equation} \label{eq:cond-thm}
   \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
@@ -331,7 +331,8 @@ mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying
 \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$
 satisfies the integrability condition \eqref{eq:cond-integr}. This
 section aims at proving the following result:
-\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2full}
+
+\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2smooth}
 Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$. Let
 $\gamma_u:\R^+\to\surf$ and $\gamma_v:\R^+\to\surf$ be two smooth
 curves with respective geodesic curvatures $\ko_u:\R^+\to\R$ and
@@ -352,73 +353,105 @@ $\varphi$ is a smooth Chebyshev net on $\Omega$ with angles
 $0<\omega<\pi$.
 \end{theorem}
 
+We in fact prove a slightly stronger version of Theorem
+\ref{thm2smooth}. Denote $\Phi^{r,k} =
+C^{r}([0,L_u],C^{k}([0,L_v],\R^2))$ the space of mappings of $D$ to
+$\R^2$ with $C^r$ regularity in the first variable and $C^k$
+regularity in the second variable. Similarly, define
+$\Theta^{r,k}=C^r([0,L_u],C^k([0,L_v],\R))$ the space of real
+functions on $D$ with $C^r$ regularity in the first variable and $C^k$
+regularity in the second variable. To simplify notations, set
+$\Phi^{k,k}=\Phi^k$ and $\Theta^{k,k}=\Theta^k$.
 
-
-In order to prove Theorem \ref{thm2full}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
-
-\subsection{Functional spaces and statement of the main result}\label{sec:norms}
-
-We now turn to the regularity required on the curves $\gamma_u$ and $\gamma_v$ and on the angle distribution $\omega$. In what follows, we define the spaces in which the curves, parametrizations and angles are constructed.  %When no confusion is possible, the mention of $L$, $L_u$ and $L_v$ will be dropped in the following notations for the sake of brevity.
-Recall that
-\begin{equation*}
-  D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+.
-\end{equation*}
-Let $k\in\EN$ and $L\in(0,L_v]$. We consider the space $C^{k+2}([0,L],\surf)$ of curves $\gamma$ with general parametrizations on $\surf$ and such that the geodesic curvature of $\gamma$ has $C^{k}$-regularity. % The space $W^{k+2,p}$, endowed with the norm
-% \begin{equation}\label{normphi}
-%   \|\gamma\|_{W^{k+2,p}} = |\gamma(0)|+|\gamma'(0)| + \|\gamma''\|_{W^{k,p}([0,L])},
-% \end{equation}
-% is a Banach space.
-We define $\Gamma^{k+2}([0,L])$ to be the closed subset of $C^{k+2}([0,L],\surf)$ formed by arc-length parametrized curves:
-\begin{equation*}  
-  \Gamma^{k+2}([0,L]) = \Big\{\gamma \in C^{k+2}([0,L], \surf) \text{ s.t. } \forall s\in[0,L],~ |\gamma'(s)|_{g(\gamma(s))} = 1\Big\},
-\end{equation*}
-equipped with the norm $\|\cdot\|_{C^{k+2}([0,L])}$. Note that the norms involved in the Sobolev spaces are the Euclidean norms. Let $r\in\EN$. We define the space $\Theta^{r,k}(D)$ of angle distributions on $D$:
-\begin{equation*}
-  \Theta^{r,k}(D) = C^r\big([0,L_u],C^k([0,L_v], \R/2\pi\Z)\big),
-\end{equation*}
-equipped with the norm 
-\begin{equation*}
-  \|\omega\|_{\Theta^{r,k}(D)} = \|\omega\|_{C^r([0,L_u],C^k([0,L_v]))}.
-\end{equation*}
- In the case where $k=r$, the notation of $\Theta^{k,k}(D)$ is simplified to $\Theta^k(D)$. We denote $\Phi^{r,k+2}(D)$ the closed subset of the Banach space $C^r([0,L_u],C^{k+2}([0,L_v],\surf))$ formed by arc-length parametrized curves with $C^{k+2}$-regularity depending on a parameter of regularity $C^r$:
-\begin{equation*}  
-  \Phi^{r,k+2}(D) := C^r\big([0,L_u], \Gamma^{k+2}([0,L_v])\big)\subset C^r\big([0,L_u],C^{k+2}([0,L_v],\surf)\big).
-\end{equation*}
-This space is equipped with the norm 
-\begin{equation*}
-  \|\varphi\|_{\Phi^{r,k+2}(D)} = \|\varphi\|_{C^r([0,L_u],\Gamma^{k+2}([0,L_v]))}.
-\end{equation*}
- Note that we do not require the regularity on the first variable to be the same as the regularity on the second variable. This will be made visible in the construction of the candidate Chebyshev net $\varphi$: the first coordinate denotes the initial conditions of an ordinary differential equation in the second coordinate, which does not entail the same regularity.
-
-
-Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{r+2}([0,L_u])\Times \Gamma^{k+2}([0,L_v])$ be two curves with respective geodesic curvatures $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$, and such that $\gamma_u(0)=\gamma_v(0)$. We define the affine subspace composed of the angle distributions satisfying the boundary conditions \eqref{eq:cond-bord-angle}:
-\begin{equation*}  
-    \Theta_{\gamma}^{r,k}(D) =
-    \left\{ 
-      % \begin{array}{c|c} 
-      \omega \in \Theta^{r,k}(D),
-    % \begin{array}{l}
-  %     \displaystyle\omega(u, 0) = \angle(\gamma_u'(0), \gamma_v'(0)) - \int_0^u\ko_u(s)\ds,\\
-  %     \displaystyle\omega(0,v) = \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds
-  %   \end{array}\\
-  % \end{array}
-\text{ s.t. $\omega$ satisfies \eqref{eq:cond-bord-angle}}\right\}.
-\end{equation*}
-The subspace $\Theta^{r,k}_{\gamma}$ is a closed subset of the Banach space $\Theta^{r,k}$. Again, in the case where $r=k$, we set $\Theta_{\gamma}^k=\Theta_{\gamma}^{k,k}$.
-
-We can now restate Theorem \ref{thm2inexact} with the correct regularity.
 \begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2}
-Let $\surf$ be a smooth, open, complete, and simply connected surface and let $k\in\EN$. Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])$, with $L_u,L_v\in\R_\ast^+$, be two curves with respective geodesic curvatures $\ko_u\in C^k([0,L_u])$ and $\ko_v\in C^k([0,L_v])$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose that $\angle(\gamma_1'(0),\gamma_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:=\J(\gamma) \in \Theta^{k+1}_{\gamma}(D)$, with $D=[0,L_u]\Times[0,L_v]$, verifying the boundary conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)\in\Phi^{k+2}(D)$ the unique mapping satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. 
-
-Suppose moreover that we have $0<\omega(u,v)<\pi$, for all $(u,v)\in D$. Then, $\varphi$ is a Chebyshev net, i.e., it also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda}, and the mappings
-\begin{equation*}
-\begin{array}{cccc}
-\J:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])&\to&\Theta^{k+1}(D),\\
-  \I:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])\Times\Theta^{k+1}(D)&\to&\Phi^{k+2}(D)
-\end{array}
-\end{equation*}
-are continuous.
+Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$. Let
+$k\in\mathbb{N}$. Let $\gamma_u:\R^+\to\surf$ and
+$\gamma_v:\R^+\to\surf$ be two curves with $C^{k+2}$ regularity, with
+respective geodesic curvatures $\ko_u:\R^+\to\R$ and
+$\ko_v:\R^+\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose
+that $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ and that
+the sector $\Omega$ delimited by $\gamma_u$ and $\gamma_v$
+verifies \[\int_{\gamma_u}{\ko_u^+} + \int_{\gamma_v}{\ko_v^-} +
+\int_{\Omega}{K^+}<\pi-\psi \text{ and } \int_{\gamma_u}{\ko_u^-} +
+\int_{\gamma_v}{\ko_v^+} + \int_{\Omega}{K^-}<\psi.\] Let
+$L_u,L_v\in\R_\ast^+\cup\{+\infty\}$ and
+$D=[0,L_u]\Times[0,L_v]$. Then, there exists a unique angle
+distribution $\omega\in \Theta^{k+1}$ verifying the boundary
+conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis
+formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega):
+D\to\surf$ the unique mapping satisfying \eqref{eq:cheb-def-c3b},
+\eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. The mapping
+$\varphi$ is a Chebyshev net with $\Phi^{k+2}$ regularity on $\Omega$
+with angles $0<\omega<\pi$.
 \end{theorem}
+
+\modif{Annonce du plan à retravailler}
+
+In order to prove Theorem \ref{thm2}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
+
+%% \subsection{Functional spaces and statement of the main result}\label{sec:norms}
+
+%% We now turn to the regularity required on the curves $\gamma_u$ and $\gamma_v$ and on the angle distribution $\omega$. In what follows, we define the spaces in which the curves, parametrizations and angles are constructed.  %When no confusion is possible, the mention of $L$, $L_u$ and $L_v$ will be dropped in the following notations for the sake of brevity.
+%% Recall that
+%% \begin{equation*}
+%%   D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+.
+%% \end{equation*}
+%% Let $k\in\EN$ and $L\in(0,L_v]$. We consider the space $C^{k+2}([0,L],\surf)$ of curves $\gamma$ with general parametrizations on $\surf$ and such that the geodesic curvature of $\gamma$ has $C^{k}$-regularity. % The space $W^{k+2,p}$, endowed with the norm
+%% % \begin{equation}\label{normphi}
+%% %   \|\gamma\|_{W^{k+2,p}} = |\gamma(0)|+|\gamma'(0)| + \|\gamma''\|_{W^{k,p}([0,L])},
+%% % \end{equation}
+%% % is a Banach space.
+%% We define $\Gamma^{k+2}([0,L])$ to be the closed subset of $C^{k+2}([0,L],\surf)$ formed by arc-length parametrized curves:
+%% \begin{equation*}  
+%%   \Gamma^{k+2}([0,L]) = \Big\{\gamma \in C^{k+2}([0,L], \surf) \text{ s.t. } \forall s\in[0,L],~ |\gamma'(s)|_{g(\gamma(s))} = 1\Big\},
+%% \end{equation*}
+%% equipped with the norm $\|\cdot\|_{C^{k+2}([0,L])}$. Note that the norms involved in the Sobolev spaces are the Euclidean norms. Let $r\in\EN$. We define the space $\Theta^{r,k}(D)$ of angle distributions on $D$:
+%% \begin{equation*}
+%%   \Theta^{r,k}(D) = C^r\big([0,L_u],C^k([0,L_v], \R/2\pi\Z)\big),
+%% \end{equation*}
+%% equipped with the norm 
+%% \begin{equation*}
+%%   \|\omega\|_{\Theta^{r,k}(D)} = \|\omega\|_{C^r([0,L_u],C^k([0,L_v]))}.
+%% \end{equation*}
+%%  In the case where $k=r$, the notation of $\Theta^{k,k}(D)$ is simplified to $\Theta^k(D)$. We denote $\Phi^{r,k+2}(D)$ the closed subset of the Banach space $C^r([0,L_u],C^{k+2}([0,L_v],\surf))$ formed by arc-length parametrized curves with $C^{k+2}$-regularity depending on a parameter of regularity $C^r$:
+%% \begin{equation*}  
+%%   \Phi^{r,k+2}(D) := C^r\big([0,L_u], \Gamma^{k+2}([0,L_v])\big)\subset C^r\big([0,L_u],C^{k+2}([0,L_v],\surf)\big).
+%% \end{equation*}
+%% This space is equipped with the norm 
+%% \begin{equation*}
+%%   \|\varphi\|_{\Phi^{r,k+2}(D)} = \|\varphi\|_{C^r([0,L_u],\Gamma^{k+2}([0,L_v]))}.
+%% \end{equation*}
+%%  Note that we do not require the regularity on the first variable to be the same as the regularity on the second variable. This will be made visible in the construction of the candidate Chebyshev net $\varphi$: the first coordinate denotes the initial conditions of an ordinary differential equation in the second coordinate, which does not entail the same regularity.
+
+
+%% Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{r+2}([0,L_u])\Times \Gamma^{k+2}([0,L_v])$ be two curves with respective geodesic curvatures $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$, and such that $\gamma_u(0)=\gamma_v(0)$. We define the affine subspace composed of the angle distributions satisfying the boundary conditions \eqref{eq:cond-bord-angle}:
+%% \begin{equation*}  
+%%     \Theta_{\gamma}^{r,k}(D) =
+%%     \left\{ 
+%%       % \begin{array}{c|c} 
+%%       \omega \in \Theta^{r,k}(D),
+%%     % \begin{array}{l}
+%%   %     \displaystyle\omega(u, 0) = \angle(\gamma_u'(0), \gamma_v'(0)) - \int_0^u\ko_u(s)\ds,\\
+%%   %     \displaystyle\omega(0,v) = \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds
+%%   %   \end{array}\\
+%%   % \end{array}
+%% \text{ s.t. $\omega$ satisfies \eqref{eq:cond-bord-angle}}\right\}.
+%% \end{equation*}
+%% The subspace $\Theta^{r,k}_{\gamma}$ is a closed subset of the Banach space $\Theta^{r,k}$. Again, in the case where $r=k$, we set $\Theta_{\gamma}^k=\Theta_{\gamma}^{k,k}$.
+
+%% We can now restate Theorem \ref{thm2inexact} with the correct regularity.
+%% \begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2}
+%% Let $\surf$ be a smooth, open, complete, and simply connected surface and let $k\in\EN$. Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])$, with $L_u,L_v\in\R_\ast^+$, be two curves with respective geodesic curvatures $\ko_u\in C^k([0,L_u])$ and $\ko_v\in C^k([0,L_v])$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose that $\angle(\gamma_1'(0),\gamma_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:=\J(\gamma) \in \Theta^{k+1}_{\gamma}(D)$, with $D=[0,L_u]\Times[0,L_v]$, verifying the boundary conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)\in\Phi^{k+2}(D)$ the unique mapping satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. 
+
+%% Suppose moreover that we have $0<\omega(u,v)<\pi$, for all $(u,v)\in D$. Then, $\varphi$ is a Chebyshev net, i.e., it also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda}, and the mappings
+%% \begin{equation*}
+%% \begin{array}{cccc}
+%% \J:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])&\to&\Theta^{k+1}(D),\\
+%%   \I:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])\Times\Theta^{k+1}(D)&\to&\Phi^{k+2}(D)
+%% \end{array}
+%% \end{equation*}
+%% are continuous.
+%% \end{theorem}
 
 \section{Construction of a Chebyshev net from its angle distribution}\label{subsec:constr-param}
 We now prove that a Chebyshev net can be constructed uniquely from its angle distribution. We start by showing in Subsection \ref{subsec:construction} that the construction of curves from their geodesic curvature, initial point and initial tangent vector is a well-posed problem. We then define, following \cite{Ghys09}, the mapping $\I(\gamma,\omega)$ which, for given boundary curves $\gamma_u$ and $\gamma_v$, associates with any angle distribution $\omega$ satisfying the boundary conditions \eqref{eq:cond-bord-angle} the candidate Chebyshev net $\varphi$, with angle distribution $\omega$, satisfying the boundary conditions \eqref{eq:cond-bord-c3} (Subsection \ref{subsubsec:constr-param}). The parametrization $\varphi$ is constructed in such a way that the $v$-coordinate curves are arc-length parametrized curves with geodesic curvatures satisfying \eqref{eq:courb-geodb}. We moreover show the continuity of the mapping $\I$ with respect to the angle distribution and to the delimiting curves $\gamma_u$ and $\gamma_v$. In Subsection \ref{sec:reg-candidate}, we show that the candidate Chebyshev net $\varphi$ has improved regularity in the $u$-coordinate whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. Finally, in Subsection \ref{sec:reg-cheb}, we prove that $\varphi$ is indeed a Chebyshev net if $\omega$ satisfies the integrability condition and has a sufficient regularity.
@@ -1769,7 +1802,7 @@ for all $(u,v)\in U$.
 We construct in what follows Chebyshev nets with a finite set of conical singularities on surfaces with finite total negative curvature and total positive curvature lower than $2\pi$. The main result of this section is the following theorem.
 \begin{theorem}[Existence of piecewise smooth Chebyshev nets with singularities]\label{thm:existence-cheb-net}
   Let $\surf$ be a smooth, complete, simply connected surface satisfying
-\begin{equation} \label{eq:cond-thm}
+\begin{equation} \label{eq:cond-thm2}
   \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
 \end{equation}
 where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. %We set $N_{\max} = \frac{4}{\pi}\int_\surf K^-+4$.
@@ -2867,8 +2900,8 @@ An example of skeleton is then presented in Figure \ref{fig:skeleton}.
 \end{figure}
 
 \section{Proof of the main theorem}\label{subsec:cheb-net-sing}
-We prove in this section Theorem \ref{thm:existence-cheb-net} on the existence of piecewise smooth Chebyshev nets with singularities on surfaces $\surf$ satisfying the curvature bound \eqref{eq:cond-thm}.
-We first gather the results of Theorem  \ref{thm:cheb-half-surface} and Theorem \ref{thm:splitting-surf} to construct a Chebyshev net with singularities on $\surf$ (Theorem \ref{thm:exist-cheb-sing}). Then, we show that the Chebyshev parametrization obtained on each broken half-surface by Theorem \ref{thm:cheb-half-surface} is piecewise smooth (Theorem \ref{thm:cheb-half-surface-smooth3}). The proof of Theorem \ref{thm:existence-cheb-net} then follows from Theorem \ref{thm:exist-cheb-sing} and Theorem \ref{thm:cheb-half-surface-smooth3}.
+We prove in this section Theorem \ref{thm:main_thm} on the existence of piecewise smooth Chebyshev nets with singularities on surfaces $\surf$ satisfying the curvature bound \eqref{eq:cond-thm}.
+We first gather the results of Theorem  \ref{thm:cheb-half-surface} and Theorem \ref{thm:splitting-surf} to construct a Chebyshev net with singularities on $\surf$ (Theorem \ref{thm:exist-cheb-sing}). Then, we show that the Chebyshev parametrization obtained on each broken half-surface by Theorem \ref{thm:cheb-half-surface} is piecewise smooth (Theorem \ref{thm:cheb-half-surface-smooth3}). The proof of Theorem \ref{thm:main_thm} then follows from Theorem \ref{thm:exist-cheb-sing} and Theorem \ref{thm:cheb-half-surface-smooth3}.
 
 \subsection{Existence of a Chebyshev net with conical singularities} \label{subsubsec:cheb-net-bifurc}
 \begin{theorem}[Existence of Chebyshev nets with singularities]\label{thm:exist-cheb-sing}
@@ -2977,7 +3010,7 @@ be the edges of the skeleton that are included in $\halfP^i_c$ and $\halfP^j_c$ 
 % \end{remarkE}
 
 \subsection{Piecewise smooth Chebyshev nets on broken half-surfaces}\label{subsubsec:half-surfaces-smooth-cheb}
-Let us notice that whenever all the broken half-surfaces $\{\halfP^i_c\}_{1\leq i\leq\Npol}$ obtained in Theorem \ref{thm:splitting-surf} are smooth sectors (only one vertex), Theorem \ref{thm:existence-cheb-net} follows from Propositions \ref{prop:sector} and \ref{thm:exist-cheb-sing}. In the general case, we need to prove that, for all $i\in\{1,...,\Npol\}$, the Chebyshev parametrization $\varphi_i:\halfP_e^i=(\R^+)^2\to \halfP_c^i$ obtained from Theorem \ref{thm:cheb-half-surface} on the geodesic broken half-surface $\halfP^i_c$ satisfying the conditions
+Let us notice that whenever all the broken half-surfaces $\{\halfP^i_c\}_{1\leq i\leq\Npol}$ obtained in Theorem \ref{thm:splitting-surf} are smooth sectors (only one vertex), Theorem \ref{thm:main_thm} follows from Propositions \ref{prop:sector} and \ref{thm:exist-cheb-sing}. In the general case, we need to prove that, for all $i\in\{1,...,\Npol\}$, the Chebyshev parametrization $\varphi_i:\halfP_e^i=(\R^+)^2\to \halfP_c^i$ obtained from Theorem \ref{thm:cheb-half-surface} on the geodesic broken half-surface $\halfP^i_c$ satisfying the conditions
 \begin{equation} \label{eq:cond-geod-half-surf}
   \int_{\halfP^i_c} K^+ < \pi-|\psi^i|_{l^1}, \quad\int_{\halfP^i_c} K^- < |\psi^i|_{l^\infty},
 \end{equation} 

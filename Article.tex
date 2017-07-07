@@ -103,7 +103,7 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollaryF}[theorem]{Corollaire}
-\newtheorem{definitionF}[theorem]{D�finition}
+\newtheorem{definitionF}[theorem]{Définition}
 
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{proprieteE}[theorem]{Property}
@@ -196,41 +196,65 @@
 
 \bibliographystyle{plain}
 
-\textcolor{red}{DEBUT DU CHAPITRE 4}
+\modif{DEBUT DU CHAPITRE 4}
  
 
 \section{Introduction}
 
-\textcolor{red}{A FAIRE !!!}
+\modif{red}{A FAIRE !!!}
 
- We prove in this chapter the existence and the uniqueness of a Chebyshev net delimited by two smooth curves called boundary conditions. We outline the main ideas of the proof as follows. Following \cite{Ghys09}, we consider the angle distribution defined by the angle between the coordinate curves of the candidate Chebyshev net. We prove that one can construct a unique mapping from this angle distribution such that the $v$-coordinate curves are arc-length parametrized curves with the proper geodesic curvature defined by this angle distribution. Note that the choice of the direction is arbitrary, so that the $u$-coordinate curves could have been chosen. This construction entails a loss of symmetry between these two coordinates which materializes itself by a differentiation between the regularity of the two directions of coordinates curves. The aim is now to view the Hazzidakis formula as a fixed-point equation on the angle distribution, using that the candidate Chebyshev net depends (Lipschitz) continuously on this angle distribution. 
 
- We then show that, supposing that the Hazzidakis formula is satisfied by the angle distribution, we obtain a regularity pick-up by the use of this identity, and therefore we recover the symmetry between the two directions. Furthermore, we prove that, under suitable regularity conditions, the candidate mapping constructed from the angle distribution is indeed a Chebyshev net, i.e., the $u$-coordinate curves are also arc-length parametrized. The last step of the proof is to show the existence of a unique solution to the equation associated with Hazzidakis formula. This is obtained in the spirit of the Cauchy--Lipschitz theorem: we first prove this existence and uniqueness for a small interval in the $v$-coordinate, and we then extend this result to the whole domain.
-
+\modif{Théorème final}
+\begin{theorem}[Existence of a smooth Chebyshev net out of a finite
+    number of balls]\label{thm:existence-cheb-net}
+  Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$ satisfying
+\begin{equation} \label{eq:cond-thm}
+  \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
+\end{equation}
+where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. %We set $N_{\max} = \frac{4}{\pi}\int_\surf K^-+4$.
+Then, there exists a finite number of balls $(\B_i)_{1\leq i\leq \N}$
+with an arbitrary small radius $\varepsilon$ such that
+$M\setminus\bigcup_{1\leq i\leq \N}\B_i$ admits a smooth Chebyshev
+net. \modif{Ajouter estimation sur $\N$.}
+\end{theorem}
 
 \section{Preliminaries}
-\subsection{Informal statement of the main result}
+
+\modif{A MODIFIER !}
+
+\section{Smoothing of a Chebyshev net with conical singularities}
+\modif{A FAIRE !}
+
+\section{Existence of a Chebyshev net from Cauchy boundary conditions}
+\label{sec:chap4}
+\subsection{Statement of the main result}
 Let 
 \begin{equation*}
   D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+,
 \end{equation*}
- and let $\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be two curves such that $\gamma_u(0)=\gamma_v(0)$, and forming an interior angle $\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ at their intersection. For clarity of exposition, throughout this chapter, we consider a slightly different notion of Chebyshev net which will refer to mappings (not necessarily homeomorphisms) $\varphi:D\to\surf$ satisfying
+ and let $\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be
+ two curves such that $\gamma_u(0)=\gamma_v(0)$, and forming an
+ interior angle $\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ at their
+ intersection and exterior angle
+ $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))$. For clarity of
+ exposition, throughout this section, we consider a slightly different
+ notion of Chebyshev net which will refer to mappings (not necessarily
+ homeomorphisms) $\varphi:D\to\surf$ satisfying
 \begin{subequations}\label{eq:cheb-def-c3}
 \begin{align}\label{eq:cheb-def-c3a}
 |\partial_u \varphi|_g(u,v) = 1,\\
 |\partial_v \varphi|_g(u,v) = 1,\label{eq:cheb-def-c3b}
 \end{align}
 \end{subequations}
-for all $(u,v)\in D$. Furthermore, note that the orientation of the boundary curve $\gamma_v$ is reversed in this chapter to simplify the exposition. 
-We prove in the sequel the existence and the uniqueness of a Chebyshev net $\varphi:D\to\surf$ verifying the primal boundary conditions
+for all $(u,v)\in D$. Furthermore, note that the orientation of the boundary curve $\gamma_v$ is reversed in this section to simplify the exposition. 
+We prove in the sequel the existence and the uniqueness of a Chebyshev net $\varphi:D\to\surf$ verifying the Cauchy boundary conditions
 \begin{equation}\label{eq:cond-bord-c3}
 \begin{split}
   \varphi(u,0)=\gamma_u(u),\quad\forall u\in[0,L_u],\\ 
   \varphi(0,v)=\gamma_v(v),\quad\forall v\in[0,L_v].
 \end{split}
 \end{equation}
-Moreover, we show that the solution depends continuously on these boundary curves, in a sense that will be made precise later on. The considered surface $\surf$ is supposed to be smooth, open, complete, and simply connected and we denote $K$ its Gaussian curvature. %We assume that the total absolute curvature $\int_\surf|K|$ of $\surf$ is finite. 
-Due to the above assumptions, the surface $\surf$ is homeomorphic to the plane so that we suppose in what follows that $\surf=(\R^2,g)$. We moreover suppose that the metric $g$ satisfies the following property: for all compact set $W\subset\surf$, there exists $\Csurf>1$ such that 
+Since $\surf$ is a plane immersion, we identify in the sequel $\surf=(\R^2,g)$. We moreover suppose that the metric $g$ satisfies the following property: for all compact set $W\subset\surf$, there exists $\Csurf>1$ such that 
 \begin{equation}\label{eq:equiv}
   |X|_{g(p)} \leq \Csurf|X|,
 \end{equation}
@@ -300,11 +324,25 @@ for all $(u,v)\in D$, where $\kop_u:D\to\R$ and $\kop_v:D\to\R$ are respectively
 \omega(0,v) &= \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds,\quad\forall v\in[0,L_v].
 \end{align}
 \end{subequations}
-We will first show that we can associate with any angle distribution $\omega:D\to\R/2\pi\Z$ satisfying \eqref{eq:cond-bord-angle} a unique mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3}, and \eqref{eq:courb-geodb}, and then we will show that this mapping also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. This section aims at proving the following result:
+We will first show that we can associate with any angle distribution $\omega:D\to(0,\pi)$ satisfying \eqref{eq:cond-bord-angle} a unique mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3}, and \eqref{eq:courb-geodb}, and then we will show that this mapping also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. This section aims at proving the following result:
 \begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2inexact}
-Let $\surf$ be a smooth, open, complete, and simply connected surface. Let $\gamma_u:[0,L_u]\to\surf$, with $L_u\in\R_\ast^+$, and $\gamma_v:[0,L_v]\to\surf$, with $L_v\in\R_\ast^+$, be two curves with respective geodesic curvatures $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose that $\angle(\gamma_1'(0),\gamma_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:D\to\R/2\pi\Z$, with $D=[0,L_u]\Times[0,L_v]$, verifying the boundary conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega): D\to\surf$ the unique mapping satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}.
-
-Suppose moreover that we have $0<\omega(u,v)<\pi$, for all $(u,v)\in D$. Then, $\varphi$ is a Chebyshev net, i.e., it also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda}, and the dependency of $\omega$ and $\varphi$ is continuous with respect to the boundary conditions $\gamma_u$ and $\gamma_v$.
+Let $\surf$ be a smooth, open, complete, and simply connected
+surface. Let $\gamma_u:\R^+\to\surf$ and $\gamma_v:\R^+\to\surf$ be
+two smooth curves with respective geodesic curvatures $\ko_u:\R^+\to\R$ and
+$\ko_v:\R^+\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose
+that $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ and that
+the sector $\Omega$ delimited by $\gamma_u$ and $\gamma_v$
+verifies \[\int_{\gamma_u}{\ko_u^+} + \int_{\gamma_v}{\ko_v^-} +
+\int_{\Omega}{K^+}<\pi-\psi \text{ and } \int_{\gamma_u}{\ko_u^-} +
+\int_{\gamma_v}{\ko_v^+} + \int_{\Omega}{K^-}<\psi.\] Let
+$L_u,L_v\in\R_\ast^+$ and $D=[0,L_u]\Times[0,L_v]$. Then, there exists
+a unique angle distribution $\omega:D\to(o,\pi)$ verifying the
+boundary conditions \eqref{eq:cond-bord-angle} and satisfying the
+Hazzidakis formula \eqref{eq:hazz-form}, with
+$\varphi:=\I(\gamma,\omega): D\to\surf$ the unique mapping satisfying
+\eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and
+\eqref{eq:courb-geodb}. The mapping $\varphi$ is a smooth Chebyshev net on
+$\Omega$ with angles $0<\omega<\pi$.
 \end{theorem}
 In the previous statement, we have not defined precisely the regularity of the objects or the norms on the considered vector spaces. These are defined in Section \ref{sec:norms}, and a more accurate statement of Theorem \ref{thm2inexact} is given by Theorem \ref{thm2}. A direct consequence of Theorem \ref{thm2} is the following theorem:
 \begin{theorem}[Existence of a unique solution to integrability condition]
@@ -433,9 +471,9 @@ We illustrate the family of curves $\sigma_1$ introduced in Proposition \ref{pro
   \caption{Illustration of the construction of the family of curves $\sigma_1$}\label{fig:construction}
 \end{figure}
 \begin{proof}
-  To prove the claim, we proceed as follows. We first introduce in Step \ref{step:geod-eq} the geodesic curvature equation that permits to define uniquely a curve from its geodesic curvature. The existence and the uniqueness of the curve is proved in Step \ref{step:init-induc} using Cauchy--Lipschitz theorem. Then, in order to apply an induction argument, we prove \eqref{eq:borne-courbe} and \eqref{eq:estim-courbe} in the case $k=0$ and $r=0$ using Grönwall's inequality. The equation satisfied by the derivatives of the solution is presented in a generic form to facilitate the end of the proof in Step \ref{step:diff-eq}. Finally, we prove \eqref{eq:borne-courbe} and \eqref{eq:estim-courbe2} in Steps \ref{step:borne} and \ref{step:control} using induction arguments. Whenever there is no ambiguity, the domain of the variables will be omitted.
+  To prove the claim, we proceed as follows. We first introduce in Step \ref{step:geod-eq} the geodesic curvature equation that permits to define uniquely a curve from its geodesic curvature. The existence and the uniqueness of the curve is proved in Step \ref{step:init-induc} using Cauchy--Lipschitz theorem. Then, in order to apply an induction argument, we prove \eqref{eq:borne-courbe} and \eqref{eq:estim-courbe} in the case $k=0$ and $r=0$ using GrÃ¶nwall's inequality. The equation satisfied by the derivatives of the solution is presented in a generic form to facilitate the end of the proof in Step \ref{step:diff-eq}. Finally, we prove \eqref{eq:borne-courbe} and \eqref{eq:estim-courbe2} in Steps \ref{step:borne} and \ref{step:control} using induction arguments. Whenever there is no ambiguity, the domain of the variables will be omitted.
   \begin{proofpart}[Formulation of the geodesic curvature equation]\label{step:geod-eq}
-  Let $(\sigma^1,\sigma^2)$, with $\sigma^1,\sigma^2:[0,L]\to\R$, be the coordinates of the candidate curve $\sigma:[0,L]\to\surf$ with geodesic curvature $\ko$. %The proof follows directly by application of Carathéodory's existence theorem \cite{Har64}, Grönwall's and Jensen's inequalities on
+  Let $(\sigma^1,\sigma^2)$, with $\sigma^1,\sigma^2:[0,L]\to\R$, be the coordinates of the candidate curve $\sigma:[0,L]\to\surf$ with geodesic curvature $\ko$. %The proof follows directly by application of CarathÃ©odory's existence theorem \cite{Har64}, GrÃ¶nwall's and Jensen's inequalities on
  We denote $\frac{D}{dt}$ the covariant derivative along the curve $\sigma$. The geodesic curvature equation for arc-length parametrized curves gives
 \begin{equation}
 \label{eq:geod-curv}
@@ -495,7 +533,7 @@ Then, since the restrition of $G$ and $f$ to $\B$ are Lipschitz continuous in th
 \begin{equation*}
   |\dot X_1 - \dot X_2| \leq (C_G+|\ko_1| C_f)|X_2-X_1|+|\ko_2-\ko_1| \ \|f(X_2)\|_{C^0(D_{1,2}))}.
 \end{equation*} 
-Therefore, using Grönwall's inequality and \eqref{eq:pr-bound-f}, we infer that
+Therefore, using GrÃ¶nwall's inequality and \eqref{eq:pr-bound-f}, we infer that
 \small
 \begin{equation}
  \label{eq:reg-equ-geod}
@@ -561,7 +599,7 @@ Then, to obtain \eqref{eq:borne-courbe}, we only need to prove that
   \|\DI X_m\|_{C^0(D_{1,2})} \leq C,
 \end{equation}
 where the constant $C$ depends on $\Lmax$, $\|x_m\|_{C^{i_1}([0,L_1])}$, $\|V_m\|_{C^{i_1}([0,L_1])}$, and $\|\ko_m\|_{C^{i_1}([0,L_1],C^{i_2}([0,L_2]))}$,
-for all $I=(i_1,i_2)\in\{0,...,r\}\Times\{0,...,k{+}1\}$. We prove \eqref{eq:pr-borne-courbe} by induction on $I\in\{0,...,r\}\Times\{0,...,k+1\}$. Hence, we first consider the case $i_2=0$, in which case we have, using \eqref{eq:eq-der-courbe} and Grönwall's inequality,
+for all $I=(i_1,i_2)\in\{0,...,r\}\Times\{0,...,k{+}1\}$. We prove \eqref{eq:pr-borne-courbe} by induction on $I\in\{0,...,r\}\Times\{0,...,k+1\}$. Hence, we first consider the case $i_2=0$, in which case we have, using \eqref{eq:eq-der-courbe} and GrÃ¶nwall's inequality,
 \begin{equation*}
 \begin{split}
 |\partial_\eta^{i_1}X_m(t)|\leq&\exp\big[\|\nabla G(X_m) +\ko_{\sigma_m}\nabla f(X_m)\|_{C^0(D_{1,2})}t\big]\\
@@ -595,7 +633,7 @@ for all $I=(i_1,i_2)\in\{0,...,r\}\Times\{0,...,k\}$ such that $I\neq(0,0)$. Fin
 \end{split}
 \end{equation*}
 \normalsize
-where $C^0$ refers to the norm $C^0(D_{1,2})$. Using Grönwall's inequality, we infer that
+where $C^0$ refers to the norm $C^0(D_{1,2})$. Using GrÃ¶nwall's inequality, we infer that
 \small
 \begin{align*}
   &|W_1-W_2|(\eta,t)\leq \exp\big[\|\nabla G(X_1) +\ko_1\nabla f(X_1)\|_{C^0}t\big]\times\\
@@ -1042,7 +1080,7 @@ Then, since $0<\omega(u,v)<\pi$, for all $(u,v)\in D_L$, we have that $T$ and $\
 |\DV R(t)| &\leq \tilde C\Big( \int_0^t|\DV R(s)|\ds + \int_0^t|(\DV R)^2(s)|\ds + \int_0^t\int_0^s|\DV R(l)|\dl \ds\Big)\\
 &\leq C\int_0^t|\DV R(s)|\ds,
 \end{align*}
-for all $u\in[0,L_u]$ and $t\in[0,L]$. Using Grönwall's inequality, we conclude that $\DV R(u,v) = 0$, for all $(u,v)\in D_L$. The claim follows.
+for all $u\in[0,L_u]$ and $t\in[0,L]$. Using GrÃ¶nwall's inequality, we conclude that $\DV R(u,v) = 0$, for all $(u,v)\in D_L$. The claim follows.
 \end{proofpart}
 \end{proof}
 
@@ -1398,7 +1436,7 @@ using that the mapping \eqref{eq:app-J} is Lipschitz continuous (Proposition \re
 % we can show, by a contradiction argument, that for $\eta < \frac{\varepsilon}{2}$, $\varphi_\sigma(M^c)\cap \B_{R_{\mathrm{curv}}}=\varnothing$ and $\frac{\varepsilon}{2} < \omega_\sigma(u,v) < \pi-\frac{\varepsilon}{2}$, for all $u\geq 0$ and $v\geq 0$. Moreover, in that case, we have $\|\omega-\omega_\sigma\|_{L^\infty((\R^+)^2)}<\eta$ which gives the continuity of $\J_k$.
 % \end{proof}
 
-\textcolor{red}{DEBUT DU CHAPITRE 5}
+\modif{DEBUT DU CHAPITRE 5}
 
 \newsavebox\myboxa
 \newsavebox\myboxb
@@ -1725,7 +1763,7 @@ A Chebyshev net $\varphi:U\subset\R^2\to\varphi(U)\subset\surf$, with $U$ an ope
   |\DU\varphi|_g(u,v) = |\DV\varphi|_g(u,v) = 1,
 \end{equation}
 for all $(u,v)\in U$.
-We construct in what follows Chebyshev nets with a finite set of conical singularities on surfaces with finite total negative curvature and total positive curvature lower than $2\pi$. The main result of this chapter is the following theorem.
+We construct in what follows Chebyshev nets with a finite set of conical singularities on surfaces with finite total negative curvature and total positive curvature lower than $2\pi$. The main result of this section is the following theorem.
 \begin{theorem}[Existence of piecewise smooth Chebyshev nets with singularities]\label{thm:existence-cheb-net}
   Let $\surf$ be a smooth, complete, simply connected surface satisfying
 \begin{equation} \label{eq:cond-thm}
@@ -1736,7 +1774,7 @@ Then, there exists a piecewise smooth Chebyshev net with conical singularities \
 % $p_1,...,p_{\Nsing}$, with $\Nsing\leq N_{\max}$, of valence $n_1,...,n_{\Nsing}\in\{5,...,N_{\max}+4\}$ on $\surf$.
 \end{theorem}
 We highlight that the proof of the theorem is constructive. %Then, let us notice that the Chebyshev net with conical singularities constructed in Theorem \ref{thm:existence-cheb-net} induces a bi-Lipschitz mapping from the plane to $\surf$ \cite{Bur05}. As a result, this theorem is optimal for surfaces having a Gaussian curvature with constant sign \cite{Bonk03}.
-The chapter is organized as follows. In Section \ref{subsec:Nhalf-surfaces}, we first consider the construction of Chebyshev nets on broken half-surfaces, defined to be half-surfaces with polygonal boundaries. We prove the existence of Chebyshev nets on broken half-surfaces under some condition on their total curvature in Theorem \ref{thm:cheb-half-surface}. Then, we show in Section \ref{subsec:splitting} that we can split surfaces satisfying \eqref{eq:cond-thm} into broken half-surfaces (Theorem \ref{thm:splitting-surf}), each of them satisfying the conditions of Theorem \ref{thm:cheb-half-surface}. Finally, we combine these two results to construct the Chebyshev net with conical singularities in Section \ref{subsec:cheb-net-sing} and we show that this Chebyshev net is piecewise smooth.
+The section is organized as follows. In Section \ref{subsec:Nhalf-surfaces}, we first consider the construction of Chebyshev nets on broken half-surfaces, defined to be half-surfaces with polygonal boundaries. We prove the existence of Chebyshev nets on broken half-surfaces under some condition on their total curvature in Theorem \ref{thm:cheb-half-surface}. Then, we show in Section \ref{subsec:splitting} that we can split surfaces satisfying \eqref{eq:cond-thm} into broken half-surfaces (Theorem \ref{thm:splitting-surf}), each of them satisfying the conditions of Theorem \ref{thm:cheb-half-surface}. Finally, we combine these two results to construct the Chebyshev net with conical singularities in Section \ref{subsec:cheb-net-sing} and we show that this Chebyshev net is piecewise smooth.
 
 Before this, let us introduce some notation. First, unless explicitly mentioned, any curve $\eta:I\subset \R\to\surf$ we consider in what follows is arc-length parametrized, continuous on $I$, and piecewise smooth according to the following definition:
 \begin{definitionE}[Piecewise smooth curves]\label{def:piecewise}
@@ -2024,7 +2062,7 @@ The Hazzidakis formula in the sector $\sect$ is illustrated in Figure \ref{fig:h
   \end{tikzpicture}
   \caption{Illustration of the Hazzidakis formula in the sector $\sect$}\label{fig:hazz2}
 \end{figure}
-Before proving this result, we recall a theorem proved in Chapter \ref{chap4}.
+Before proving this result, we recall a theorem proved in Section \ref{sec:chap4}.
 \begin{theorem}[Existence of a unique solution to integrability condition]\label{thm:exist-cond-integr-c5}
 Let $\surf$ be a smooth, open, complete, and simply connected surface. Let $\eta_1:\R^-\to\surf$ and $\eta_2:\R^+\to\surf$ be two smooth curves with respective geodesic curvatures $\ko_1:\R^-\to\R$ and $\ko_2:\R^+\to\R$, and such that $\eta_1(0) = \eta_2(0)$. Suppose that $\psi:=\angle(\eta_1'(0),\eta_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique smooth mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4}, and such that its $v$-coordinate curves are arc-length parametrized curves with a geodesic curvature $\kop_2:D\to\R$ satisfying $\kop_2(u,v) = \DV\omega(u,v)$, for all $(u,v)\in (\R^+)^2$.
 

@@ -196,38 +196,71 @@
 
 \bibliographystyle{plain}
 
-\modif{DEBUT DU CHAPITRE 4}
- 
 
-\section{Introduction}
+ \section{Introduction}
+A global net on a surface $M$ is two families of curves such that through each point $p$ there passes exactly one curve of
+each family with tangent vectors forming a basis of the tangent plane at $p$. We will denote by $\omega (p)$ the angle between
+these vector at $p$ and call it angle function of the net. A global Chebyshev net (T-net in the following) is a net in which the tangent vectors to each family of line can be parallel displaced along the lines of the other family. A net is a Chebyshev net if around each point $p$, we can find a local chart
+$\varphi : \Omega \subset \R^2 \mapsto M$, such that the two family of line are the line of coordinate $u \to \varphi (u, v_0)$
+and $v \to \varphi (u_0, v)$ with lines parametrized by arclength
+$$| \partial _u \varphi | = | \partial _v \varphi | =1.$$
+When $\omega (p)=0 [\pi]$, lines are tangent and the net is no more a local chart of the surface. Singularities at these points
+are of cuspidal type or shallow tails. This is well describe in a paper of E. Ghys \cite{ghys} introducing Chebyshev net on surfaces. It is not known
+when there exists global T-net on compact or non compact surfaces. The angle function $\omega$ between the two family of lines appear in the metric
+of local coordinates
+$${\rm d}s^2={\rm d}u^2 +  2\cos \omega (u,v) {\rm d}u {\rm d}v + {\rm d}v^2$$
+and the Gauss equation is related to a Sine-Gordon type equation of hyperbolic type:
+$$\partial ^2 _{uv} \omega = -K(u,v) \sin 2 \omega (u,v).$$
+Using Gauss Bonnet theorem which reformulate in Hazzidakis formula, it is known (see H. Hopf, \cite{HH}, Lemma 2.3) that Chebyschev
+coordinates may not exist on a simply connected surface with $|\int \int K dS | \geq 2 \pi$. 
+P. L. Chebyshev proved the local existence of his coordinates under an analyticity assumption. In this paper, beside the hyperbolicity property of
+the Gauss equation, we will construct coordinates on the surface by finding the function $\omega$ which satisfy boundary Cauchy data conditions
+on some boundary curves.
 
-\modif{red}{A FAIRE !!!}
 
 
-\modif{Théorème final}
+Piecewise smooth T-net is a weaker notion. We relax the regularity of lines of the net. Each family of lines are parallel displaced along the lines
+of the other family but it can happen that lines are only piecewise $C^1$ with existing left and right tangent vector at singular point $p$.
+We denote by $\eta_1$ the line of the other family passing through $p$ and by $\eta_2$ the line which is not $C^1$ at $p$. The left and right
+vectors $(\eta_2 ')_d (p)$ and $(\eta_2 ')_\ell (p)$ form an angle $\alpha \neq 0 [\pi]$. This angle is displaced along $\eta_1$ by parallel transport, and any line
+of the second family is singular on $\eta_1$. We call this line of singularities "twin crystal line" as it can be observed in mineralogy.
+When twin crystal line meet at some point, this create bifurcation in the net. Bifurcation can appear when $\eta_1$ and $\eta_2$ are singular 
+in the same point $p$. In this case, the bifurcation point is related to a "cross". However the number of twin crystal line which meet together at
+ $p$ can be greater than 4 but we consider only finite number case.
+
+
+ The first non local result has been proved by I. Ya. Bakelman. He  proved the existence of Chebyshev coordinates in any sector bounded by two orthogonal geodesics on a
+ simply connected Aleksandrov surface under the condition that both the positive and negative integral curvatures, $\int K^+ dS$ and $\int K^- dS$ are less than $\pi /2$,   (where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$) but the net (And the surface) is not smooth. Much later, a similar result for smooth surfaces, was proved by S. L. Samelson and W. P. Dayawansa \cite{SamDaya}: under the same restriction on the curvature, they proved that on each simply connected complete smooth surface there exists a global smooth Chebyshev net. Their proof is analytical. It is well known that the existence problem for the Chebyshev coordinates can be reduced to the existence problem for a solution to a hyperbolic system of second-order partial differential equations. This system is solved in \cite{SamDaya}  by the method of a paper of Ladyzhenskaya and Shubov  \cite{Ladishenkaya}. Burago, Ivanov and Malev in \cite{burago} used Bakelman result in a sector decomposition of a surface described in a paper of Bonk and Lang \cite{bonk}. They find four sectors satisfying hypothesis of Bakelman where they construct non smooth Chebyshev net on simply connected smooth surface $M$ with  $\int K^{\pm} dS <2\pi$. Masson and Monasse in \cite{massonMonasse} improve the result of Samelson and Dayawansa by constructing smooth T-net for simply connected surfaces with $\int K^{\pm} dS <2\pi$ which is a sharp result by the lemma of H. Hopf.
+
+
+Piecewise smooth T-net is strongly related to the construction of bi-Lipschitz map between surface. If $M$ is a simply connected surface,
+ a map $f: \R^2 \mapsto M$ is bi-Lipschitz if there exists a constant $L$ such that
+ $$\frac1L d(x,y,) \leq {\rm dist}_M(f(x),f(y)) \leq L d(x,y).$$
+For Chebyshev coordinates the Lipschitz constants can be estimated in terms of the net angles, i.e., via $\min \left( \inf \omega , \inf (\pi - \omega)\right)$.
+M. Bonk and U. Lang \cite{bonk} proved that if
+$$\int K^+ dS <2\pi \hbox{ and } \int K^- dS<C$$
+then $M$ is bi-Lipschitz equivalent to $\R^2$ with Lipschitz constant $\epsilon^{1/2}(2\pi + C)^{1/2}$. The existence of piecewise smooth T-net immediately implies a weak (with a worse constant) version of the Bonk-Lang theorem. 
+
+In this paper, we consider complete and simply connected surface $M$ and we construct by a new method piecewise smooth T-net
+by a decomposition of the surface in a finite number of sectors where we are able to produce smooth T-net. 
+The boundary of the sector are the twin crystal lines on $M$. In a the section 3, we describe the regularisation of piecewise smooth T-net
+outside a finite number of ball, arbitrarly small neighborhood of bifurcating points. More precisely the main theorem of this paper is 
+
+
 \begin{theorem}[Existence of a smooth Chebyshev net out of a finite
     number of balls]\label{thm:main_thm}
-  Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$ satisfying
+  Let $\surf$ be a smooth complete immersion of the plane $\R^2$ in $\R^3$ satisfying
 \begin{equation} \label{eq:cond-thm}
   \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
 \end{equation}
-where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. %We set $N_{\max} = \frac{4}{\pi}\int_\surf K^-+4$.
-Then, there exists a finite number of balls $(\B_i)_{1\leq i\leq \N}$
-with an arbitrary small radius $\varepsilon$ such that
-$M\setminus\bigcup_{1\leq i\leq \N}\B_i$ admits a smooth Chebyshev
-net. \modif{Ajouter estimation sur $\N$.}
+where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. 
+Then there exists a piecewise smooth Chebyshev net with a finite number of bifurcating points $\{ p_i \}_{1\leq i\leq \N}$ on $M$ with 
+$\N \leq  \frac{4}{\pi}\int_\surf K^-+4$. The surface $M\setminus\bigcup_{1\leq i\leq \N}\B_i$
+admits a smooth Chebyshev net where $B_i$ are disks centered at $p_i$ with arbitrary small radius $\varepsilon$.  
 \end{theorem}
 
 \section{Preliminaries}
 
-\modif{A MODIFIER !}
-
-\section{Smoothing of a Chebyshev net with conical singularities}
-\modif{A FAIRE !}
-
-\section{Existence of a Chebyshev net from Cauchy boundary conditions}
-\label{sec:chap4}
-\subsection{Statement of the main result}
 Let 
 \begin{equation*}
   D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+,
@@ -389,69 +422,9 @@ with angles $0<\omega<\pi$.
 
 In order to prove Theorem \ref{thm2}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
 
-%% \subsection{Functional spaces and statement of the main result}\label{sec:norms}
+\section{Smoothing of a Chebyshev net with conical singularities}
+\modif{A FAIRE !}
 
-%% We now turn to the regularity required on the curves $\gamma_u$ and $\gamma_v$ and on the angle distribution $\omega$. In what follows, we define the spaces in which the curves, parametrizations and angles are constructed.  %When no confusion is possible, the mention of $L$, $L_u$ and $L_v$ will be dropped in the following notations for the sake of brevity.
-%% Recall that
-%% \begin{equation*}
-%%   D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+.
-%% \end{equation*}
-%% Let $k\in\EN$ and $L\in(0,L_v]$. We consider the space $C^{k+2}([0,L],\surf)$ of curves $\gamma$ with general parametrizations on $\surf$ and such that the geodesic curvature of $\gamma$ has $C^{k}$-regularity. % The space $W^{k+2,p}$, endowed with the norm
-%% % \begin{equation}\label{normphi}
-%% %   \|\gamma\|_{W^{k+2,p}} = |\gamma(0)|+|\gamma'(0)| + \|\gamma''\|_{W^{k,p}([0,L])},
-%% % \end{equation}
-%% % is a Banach space.
-%% We define $\Gamma^{k+2}([0,L])$ to be the closed subset of $C^{k+2}([0,L],\surf)$ formed by arc-length parametrized curves:
-%% \begin{equation*}  
-%%   \Gamma^{k+2}([0,L]) = \Big\{\gamma \in C^{k+2}([0,L], \surf) \text{ s.t. } \forall s\in[0,L],~ |\gamma'(s)|_{g(\gamma(s))} = 1\Big\},
-%% \end{equation*}
-%% equipped with the norm $\|\cdot\|_{C^{k+2}([0,L])}$. Note that the norms involved in the Sobolev spaces are the Euclidean norms. Let $r\in\EN$. We define the space $\Theta^{r,k}(D)$ of angle distributions on $D$:
-%% \begin{equation*}
-%%   \Theta^{r,k}(D) = C^r\big([0,L_u],C^k([0,L_v], \R/2\pi\Z)\big),
-%% \end{equation*}
-%% equipped with the norm 
-%% \begin{equation*}
-%%   \|\omega\|_{\Theta^{r,k}(D)} = \|\omega\|_{C^r([0,L_u],C^k([0,L_v]))}.
-%% \end{equation*}
-%%  In the case where $k=r$, the notation of $\Theta^{k,k}(D)$ is simplified to $\Theta^k(D)$. We denote $\Phi^{r,k+2}(D)$ the closed subset of the Banach space $C^r([0,L_u],C^{k+2}([0,L_v],\surf))$ formed by arc-length parametrized curves with $C^{k+2}$-regularity depending on a parameter of regularity $C^r$:
-%% \begin{equation*}  
-%%   \Phi^{r,k+2}(D) := C^r\big([0,L_u], \Gamma^{k+2}([0,L_v])\big)\subset C^r\big([0,L_u],C^{k+2}([0,L_v],\surf)\big).
-%% \end{equation*}
-%% This space is equipped with the norm 
-%% \begin{equation*}
-%%   \|\varphi\|_{\Phi^{r,k+2}(D)} = \|\varphi\|_{C^r([0,L_u],\Gamma^{k+2}([0,L_v]))}.
-%% \end{equation*}
-%%  Note that we do not require the regularity on the first variable to be the same as the regularity on the second variable. This will be made visible in the construction of the candidate Chebyshev net $\varphi$: the first coordinate denotes the initial conditions of an ordinary differential equation in the second coordinate, which does not entail the same regularity.
-
-
-%% Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{r+2}([0,L_u])\Times \Gamma^{k+2}([0,L_v])$ be two curves with respective geodesic curvatures $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$, and such that $\gamma_u(0)=\gamma_v(0)$. We define the affine subspace composed of the angle distributions satisfying the boundary conditions \eqref{eq:cond-bord-angle}:
-%% \begin{equation*}  
-%%     \Theta_{\gamma}^{r,k}(D) =
-%%     \left\{ 
-%%       % \begin{array}{c|c} 
-%%       \omega \in \Theta^{r,k}(D),
-%%     % \begin{array}{l}
-%%   %     \displaystyle\omega(u, 0) = \angle(\gamma_u'(0), \gamma_v'(0)) - \int_0^u\ko_u(s)\ds,\\
-%%   %     \displaystyle\omega(0,v) = \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds
-%%   %   \end{array}\\
-%%   % \end{array}
-%% \text{ s.t. $\omega$ satisfies \eqref{eq:cond-bord-angle}}\right\}.
-%% \end{equation*}
-%% The subspace $\Theta^{r,k}_{\gamma}$ is a closed subset of the Banach space $\Theta^{r,k}$. Again, in the case where $r=k$, we set $\Theta_{\gamma}^k=\Theta_{\gamma}^{k,k}$.
-
-%% We can now restate Theorem \ref{thm2inexact} with the correct regularity.
-%% \begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2}
-%% Let $\surf$ be a smooth, open, complete, and simply connected surface and let $k\in\EN$. Let $\gamma=(\gamma_u,\gamma_v)\in\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])$, with $L_u,L_v\in\R_\ast^+$, be two curves with respective geodesic curvatures $\ko_u\in C^k([0,L_u])$ and $\ko_v\in C^k([0,L_v])$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose that $\angle(\gamma_1'(0),\gamma_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:=\J(\gamma) \in \Theta^{k+1}_{\gamma}(D)$, with $D=[0,L_u]\Times[0,L_v]$, verifying the boundary conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)\in\Phi^{k+2}(D)$ the unique mapping satisfying \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. 
-
-%% Suppose moreover that we have $0<\omega(u,v)<\pi$, for all $(u,v)\in D$. Then, $\varphi$ is a Chebyshev net, i.e., it also satisfies \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda}, and the mappings
-%% \begin{equation*}
-%% \begin{array}{cccc}
-%% \J:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])&\to&\Theta^{k+1}(D),\\
-%%   \I:&\Gamma^{k+2}([0,L_u])\Times\Gamma^{k+2}([0,L_v])\Times\Theta^{k+1}(D)&\to&\Phi^{k+2}(D)
-%% \end{array}
-%% \end{equation*}
-%% are continuous.
-%% \end{theorem}
 
 \section{Construction of a Chebyshev net from its angle distribution}\label{subsec:constr-param}
 We now prove that a Chebyshev net can be constructed uniquely from its angle distribution. We start by showing in Subsection \ref{subsec:construction} that the construction of curves from their geodesic curvature, initial point and initial tangent vector is a well-posed problem. We then define, following \cite{Ghys09}, the mapping $\I(\gamma,\omega)$ which, for given boundary curves $\gamma_u$ and $\gamma_v$, associates with any angle distribution $\omega$ satisfying the boundary conditions \eqref{eq:cond-bord-angle} the candidate Chebyshev net $\varphi$, with angle distribution $\omega$, satisfying the boundary conditions \eqref{eq:cond-bord-c3} (Subsection \ref{subsubsec:constr-param}). The parametrization $\varphi$ is constructed in such a way that the $v$-coordinate curves are arc-length parametrized curves with geodesic curvatures satisfying \eqref{eq:courb-geodb}. We moreover show the continuity of the mapping $\I$ with respect to the angle distribution and to the delimiting curves $\gamma_u$ and $\gamma_v$. In Subsection \ref{sec:reg-candidate}, we show that the candidate Chebyshev net $\varphi$ has improved regularity in the $u$-coordinate whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. Finally, in Subsection \ref{sec:reg-cheb}, we prove that $\varphi$ is indeed a Chebyshev net if $\omega$ satisfies the integrability condition and has a sufficient regularity.

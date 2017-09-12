@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.13)  9 SEP 2017 08:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.13)  12 SEP 2017 17:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -901,15 +901,6 @@ File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
 \c@proofpart=\count126
  (./Article.aux
 
-LaTeX Warning: Label `def:piecewise' multiply defined.
-
-
-LaTeX Warning: Label `eq:int-curv' multiply defined.
-
-
-LaTeX Warning: Label `fig:turn-angle' multiply defined.
-
-
 LaTeX Warning: Label `lem:homeo' multiply defined.
 
 )
@@ -1046,39 +1037,35 @@ ur-va-ture of $\OML/cmm/m/it/10 M$\OT1/cmr/m/it/10 , $\OML/cmm/m/it/10 K[] \OT1
 K; \OT1/cmr/m/n/10 0)$\OT1/cmr/m/it/10 .
  []
 
-
-Overfull \hbox (25.93652pt too wide) in paragraph at lines 264--275
-\U/msa/m/n/10 \\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^M[]\OT1/cmr/m/n/10 (0)\OML/c
-mm/m/it/10 ; ^^M[]\OT1/cmr/m/n/10 (0)) \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 (0\OM
-L/cmm/m/it/10 ; ^^Y\OT1/cmr/m/n/10 )$ at their in-ter-sec-tion and ex-te-rior a
-n-gle $\OML/cmm/m/it/10   \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Y \OMS/cmsy/m/n/
-10 ^^@ \U/msa/m/n/10 \\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^M[]\OT1/cmr/m/n/10 (0
-)\OML/cmm/m/it/10 ; ^^M[]\OT1/cmr/m/n/10 (0))$.
- []
-
-
-LaTeX Warning: Citation `Bonk03' on page 3 undefined on input line 290.
-
 [3]
 
-LaTeX Warning: Citation `Ghys09' on page 4 undefined on input line 296.
+LaTeX Warning: Citation `Bonk03' on page 4 undefined on input line 295.
 
 
-LaTeX Warning: Citation `Ghys09' on page 4 undefined on input line 296.
+LaTeX Warning: Citation `Ghys09' on page 4 undefined on input line 301.
+
+
+LaTeX Warning: Citation `Ghys09' on page 4 undefined on input line 301.
 
 [4] [5]
 
-LaTeX Warning: Citation `Sam95' on page 6 undefined on input line 431.
+LaTeX Warning: Reference `eq:cheb-def' on page 6 undefined on input line 436.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 440.
+
+LaTeX Warning: Citation `Sam95' on page 6 undefined on input line 440.
+
+
+LaTeX Warning: Reference `eq:cheb-def' on page 6 undefined on input line 444.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 449.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 440.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 449.
 
-Overfull \hbox (14.49042pt too wide) in paragraph at lines 443--444
+Overfull \hbox (14.49042pt too wide) in paragraph at lines 452--453
 []\OML/cmm/m/it/10 ; [] > \OT1/cmr/m/n/10 0$, be such that $\OML/cmm/m/it/10 '\
 OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^Z \OML/cmm/m/it/10 Q$ \OT1/cmr/m/n/10 an
 d such that there ex-ists $([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) \OMS/cmsy/
@@ -1086,19 +1073,20 @@ m/n/10 2 \OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ][]\OMS/cmsy/m/
 n/10 f[]g [
  []
 
+[6]
 \myboxa=\box63
 \myboxb=\box64
 \myboxc=\box65
 \boxskeleton=\box66
-[6]
-
-LaTeX Warning: Citation `Bur05' on page 7 undefined on input line 791.
 
 
-LaTeX Warning: Citation `Ghys09' on page 7 undefined on input line 868.
+LaTeX Warning: Citation `Bur05' on page 7 undefined on input line 795.
+
+
+LaTeX Warning: Citation `Ghys09' on page 7 undefined on input line 912.
 
 [7]
-Overfull \hbox (30.09158pt too wide) in paragraph at lines 874--875
+Overfull \hbox (30.09158pt too wide) in paragraph at lines 918--919
 \OT1/cmr/m/n/10 ^^@[]([0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 ])$ \OT1/cmr/m/it
 /10 the two fam-i-lies of curves de-fined by $\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 ^^Q; \OMS/cmsy/m/n/10 ^^A\OT1/cmr/m/n/10 ) := \OML/cmm/m
@@ -1108,23 +1096,23 @@ n/10 (\OML/cmm/m/it/10 ^^Q; \OMS/cmsy/m/n/10 ^^A\OT1/cmr/m/n/10 ) := \OML/cmm/m
 Q; \OMS/cmsy/m/n/10 ^^A\OT1/cmr/m/n/10 ))$\OT1/cmr/m/it/10 ,
  []
 
-
-Overfull \hbox (34.15288pt too wide) in paragraph at lines 896--896
+[8]
+Overfull \hbox (34.15288pt too wide) in paragraph at lines 940--940
 [] 
  []
 
-[8] [9]
-Overfull \hbox (11.97015pt too wide) detected at line 951
+[9]
+Overfull \hbox (11.97015pt too wide) detected at line 995
 \OML/cmm/m/it/9 X \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 ;  f\OT1/cmr/m/n/9 (\OML/
 cmm/m/it/9 X\OT1/cmr/m/n/9 ) = [] \OML/cmm/m/it/9 ;  G\OT1/cmr/m/n/9 (\OML/cmm/
 m/it/9 X\OT1/cmr/m/n/9 ) = [] \OML/cmm/m/it/9 ;
  []
 
 
-LaTeX Warning: Citation `Har64' on page 10 undefined on input line 970.
+LaTeX Warning: Citation `Har64' on page 10 undefined on input line 1014.
 
 [10]
-Overfull \hbox (9.40802pt too wide) detected at line 989
+Overfull \hbox (9.40802pt too wide) detected at line 1033
 \OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 X[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 t\OT1/cmr/m
 /n/9 ) \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 X[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 t
 \OT1/cmr/m/n/9 )\OMS/cmsy/m/n/9 j ^^T [] []\OML/cmm/m/it/9 t[]C[] \OT1/cmr/m/n/
@@ -1133,45 +1121,45 @@ Overfull \hbox (9.40802pt too wide) detected at line 989
  []
 
 
-LaTeX Warning: Citation `Har64' on page 11 undefined on input line 1002.
+LaTeX Warning: Citation `Har64' on page 11 undefined on input line 1046.
 
 
-Overfull \hbox (22.16716pt too wide) in paragraph at lines 1021--1021
+Overfull \hbox (22.16716pt too wide) in paragraph at lines 1065--1065
 [] 
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1021.
+(amsmath)                trying to recover with `aligned' on input line 1065.
 
 
-Overfull \hbox (54.51057pt too wide) in paragraph at lines 1034--1034
+Overfull \hbox (54.51057pt too wide) in paragraph at lines 1078--1078
 [] 
  []
 
 [11]
-Overfull \hbox (42.63185pt too wide) detected at line 1064
+Overfull \hbox (42.63185pt too wide) detected at line 1108
  []$[] \OT1/cmr/m/n/9 + [] [] []\OML/cmm/m/it/9 F[] [] [][]\OMS/cmsy/m/n/9 k\OM
 L/cmm/m/it/9 @[]^^T[]\OMS/cmsy/m/n/9 k[]\OML/cmm/m/it/9 ;  $ 
  []
 
-
-Overfull \hbox (16.76205pt too wide) in paragraph at lines 1081--1081
-[] 
- []
-
 [12]
-Overfull \hbox (79.53267pt too wide) in paragraph at lines 1092--1092
+Overfull \hbox (16.76205pt too wide) in paragraph at lines 1125--1125
 [] 
  []
 
 
-Overfull \hbox (40.42245pt too wide) detected at line 1109
+Overfull \hbox (79.53267pt too wide) in paragraph at lines 1136--1136
+[] 
+ []
+
+
+Overfull \hbox (40.42245pt too wide) detected at line 1153
 \OT1/cmr/m/n/10 ^^F[] = []  ^^F[] = []
  []
 
-
-Overfull \hbox (65.26886pt too wide) in paragraph at lines 1114--1117
+[13]
+Overfull \hbox (65.26886pt too wide) in paragraph at lines 1158--1161
 \OT1/cmr/m/n/10 where the con-stant $\OML/cmm/m/it/10 C$ \OT1/cmr/m/n/10 de-pen
 ds on $\OML/cmm/m/it/10 L[]$\OT1/cmr/m/n/10 , $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/
 10 x[]\OMS/cmsy/m/n/10 k[]$\OT1/cmr/m/n/10 , $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/1
@@ -1179,13 +1167,13 @@ ds on $\OML/cmm/m/it/10 L[]$\OT1/cmr/m/n/10 , $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/
 t/10 ^^T[]\OMS/cmsy/m/n/10 k[]$\OT1/cmr/m/n/10 ,
  []
 
-[13] [14]
-Overfull \hbox (4.99591pt too wide) in paragraph at lines 1186--1186
+
+Overfull \hbox (4.99591pt too wide) in paragraph at lines 1230--1230
 [] 
  []
 
-
-Overfull \hbox (15.90877pt too wide) detected at line 1198
+[14]
+Overfull \hbox (15.90877pt too wide) detected at line 1242
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ) = \OMS
 /cmsy/m/n/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 u; \OT1/cmr/m/n/10 0))\OML/cmm/m/it/10 ^^M[]\OT1/cmr/m/n/10 (\OML/cmm/m
@@ -1196,12 +1184,13 @@ t/10 u\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it
 10 u\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;
  []
 
-
-LaTeX Warning: Reference `eq:geod-dual1' on page 15 undefined on input line 121
-5.
-
 [15]
-Overfull \hbox (25.6187pt too wide) detected at line 1233
+
+LaTeX Warning: Reference `eq:geod-dual1' on page 16 undefined on input line 125
+9.
+
+
+Overfull \hbox (25.6187pt too wide) detected at line 1277
 \OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 k\OML/cmm/m/it/10 ^^M[]\OMS/cmsy/m/n/10 k[]\OML/cmm/m/it/10 ;  \
 OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[]
@@ -1211,7 +1200,7 @@ OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[]
  []
 
 
-Overfull \hbox (40.3079pt too wide) in paragraph at lines 1233--1236
+Overfull \hbox (40.3079pt too wide) in paragraph at lines 1277--1280
 \OML/cmm/m/it/10 x[]; x[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/1
 0 ([0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 ])$, $\OML/cmm/m/it/10 V[]; V[] \OMS
 /cmsy/m/n/10 2 \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 ([0\OML/cmm/m/it/10 ; L[]\OT
@@ -1221,7 +1210,7 @@ m/it/10 ; C[]\OT1/cmr/m/n/10 ([0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 ]))$.
  []
 
 [16]
-Overfull \hbox (0.74153pt too wide) in paragraph at lines 1266--1268
+Overfull \hbox (0.74153pt too wide) in paragraph at lines 1310--1312
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 1
 \OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 . First,
  ow-ing to Propo-si-tion 7[], we have $\OML/cmm/m/it/10 '[] \OT1/cmr/m/n/10 = \
@@ -1230,7 +1219,7 @@ OMS/cmsy/m/n/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^M[]; ![]\OT1/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (17.72987pt too wide) detected at line 1282
+Overfull \hbox (17.72987pt too wide) detected at line 1326
 \OML/cmm/m/it/10 @[]^^T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 @[][][]K\OT1/cmr/m
 /n/10 (\OML/cmm/m/it/10 '[]\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 ![]\OT1/cmr/m/
 n/10 )[] = \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]\OT1/cmr
@@ -1240,13 +1229,13 @@ n/10 )[] = \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]\OT1/cmr
 ![]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 @[]![];
  []
 
-
-Overfull \hbox (36.96196pt too wide) in paragraph at lines 1291--1291
+[17]
+Overfull \hbox (36.96196pt too wide) in paragraph at lines 1335--1335
 [] 
  []
 
-[17]
-Overfull \hbox (6.65224pt too wide) detected at line 1295
+
+Overfull \hbox (6.65224pt too wide) detected at line 1339
 []\OML/cmm/m/it/10 ^^T[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^T[][][] \OMS/c
 msy/m/n/10 ^^T \OML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 ![] \OMS/
 cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ![]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 + \OMS
@@ -1255,7 +1244,7 @@ cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ![]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 + \OMS
  []
 
 [18]
-Overfull \hbox (16.15144pt too wide) detected at line 1342
+Overfull \hbox (16.15144pt too wide) detected at line 1386
 \OML/cmm/m/it/10 @[]R \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 @[]!@[]RT \OT1/cmr/m/n
 /10 + []\OML/cmm/m/it/10 T[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 K\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 X[][] [] ! [][] [] []
@@ -1263,64 +1252,64 @@ n/10 (\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 X[][] [] ! [][] [] []
  []
 
 
-Overfull \hbox (1.86707pt too wide) in paragraph at lines 1354--1354
-[] 
- []
-
-
-Overfull \hbox (18.74274pt too wide) in paragraph at lines 1364--1364
+Overfull \hbox (1.86707pt too wide) in paragraph at lines 1398--1398
 [] 
  []
 
 [19]
-Overfull \hbox (77.6019pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (18.74274pt too wide) in paragraph at lines 1408--1408
+[] 
+ []
+
+
+Overfull \hbox (77.6019pt too wide) in paragraph at lines 1430--1430
 [] 
  []
 
 [20]
-Overfull \hbox (4.66881pt too wide) in paragraph at lines 1416--1416
+Overfull \hbox (4.66881pt too wide) in paragraph at lines 1460--1460
 [] 
  []
 
 
-Overfull \hbox (23.42517pt too wide) in paragraph at lines 1426--1426
+Overfull \hbox (23.42517pt too wide) in paragraph at lines 1470--1470
 [] 
  []
 
 
-Overfull \hbox (93.15508pt too wide) in paragraph at lines 1436--1436
+Overfull \hbox (93.15508pt too wide) in paragraph at lines 1480--1480
 [] 
  []
 
 [21]
-Overfull \hbox (82.29588pt too wide) in paragraph at lines 1451--1451
+Overfull \hbox (82.29588pt too wide) in paragraph at lines 1495--1495
 [] 
  []
 
 
-Overfull \hbox (42.08209pt too wide) in paragraph at lines 1458--1458
+Overfull \hbox (42.08209pt too wide) in paragraph at lines 1502--1502
 [] 
  []
 
 [22]
-Overfull \hbox (6.15607pt too wide) in paragraph at lines 1493--1493
+Overfull \hbox (6.15607pt too wide) in paragraph at lines 1537--1537
 [] 
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1500.
+(amsmath)                trying to recover with `aligned' on input line 1544.
 
-
-Overfull \hbox (16.15144pt too wide) detected at line 1523
+[23]
+Overfull \hbox (16.15144pt too wide) detected at line 1567
 \OML/cmm/m/it/10 @[]R \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 @[]!@[]RT \OT1/cmr/m/n
 /10 + []\OML/cmm/m/it/10 T[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 K\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 X[][] [] ! [][] [] []
  ! \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 ! [][] [] [] ![]:
  []
 
-[23]
-Overfull \hbox (13.90361pt too wide) in paragraph at lines 1535--1536
+
+Overfull \hbox (13.90361pt too wide) in paragraph at lines 1579--1580
 \OT1/cmr/m/n/10 ^^@[]([0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 ])[]^^@[]([0\OML/
 cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 ])$ be two curves of geodesic cur-va-tures $\O
 ML/cmm/m/it/10 ^^T[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 ([0
@@ -1328,8 +1317,8 @@ ML/cmm/m/it/10 ^^T[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 ([0
 mr/m/n/10 )$
  []
 
-
-Overfull \hbox (29.42628pt too wide) detected at line 1538
+[24]
+Overfull \hbox (29.42628pt too wide) detected at line 1582
 \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 ](\OML/cmm
 /m/it/10 u; v\OT1/cmr/m/n/10 ) = \U/msa/m/n/10 \[]\OML/cmm/m/it/10 ^^M[]\OT1/cm
 r/m/n/10 (0)\OML/cmm/m/it/10 ; ^^M[]\OT1/cmr/m/n/10 (0)[] \OMS/cmsy/m/n/10 ^^@ 
@@ -1340,28 +1329,28 @@ cmsy/m/n/10 ^^@ [][] [][] \OML/cmm/m/it/10 K[]\OMS/cmsy/m/n/10 I\OT1/cmr/m/n/10
  ))d\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 d\OML/cmm/m/it/10 s;
  []
 
-[24]
-Overfull \hbox (30.10262pt too wide) in paragraph at lines 1571--1571
+
+Overfull \hbox (30.10262pt too wide) in paragraph at lines 1615--1615
 [] 
  []
 
 [25]
-Overfull \hbox (23.97205pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (23.97205pt too wide) in paragraph at lines 1639--1639
 [] 
  []
 
 
-Overfull \hbox (78.5932pt too wide) in paragraph at lines 1604--1604
-[] 
- []
-
-
-Overfull \hbox (33.38417pt too wide) in paragraph at lines 1628--1628
+Overfull \hbox (78.5932pt too wide) in paragraph at lines 1648--1648
 [] 
  []
 
 [26]
-Underfull \hbox (badness 1117) in paragraph at lines 1647--1648
+Overfull \hbox (33.38417pt too wide) in paragraph at lines 1672--1672
+[] 
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 1691--1692
 \OT1/cmr/m/it/10 and $\OT1/cmr/m/n/10 ^^B[]([0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/
 n/10 ][][0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m
 /n/10 )])$ \OT1/cmr/m/it/10 with the norms in $\OT1/cmr/m/n/10 ^^@[]([0\OML/cmm
@@ -1370,134 +1359,100 @@ n/10 ][][0\OML/cmm/m/it/10 ; L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m
  []
 
 [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1701--1703
+Underfull \hbox (badness 10000) in paragraph at lines 1745--1747
 \OT1/cmr/m/n/10 We can now state the equiv-a-lent of Propo-si-tion 11[] in
  []
 
-
-Overfull \hbox (23.23149pt too wide) in paragraph at lines 1718--1718
-[] 
- []
-
-
-Overfull \hbox (62.24564pt too wide) in paragraph at lines 1724--1724
-[] 
- []
-
 [29]
-Overfull \hbox (47.98108pt too wide) in paragraph at lines 1757--1757
+Overfull \hbox (23.23149pt too wide) in paragraph at lines 1762--1762
+[] 
+ []
+
+
+Overfull \hbox (62.24564pt too wide) in paragraph at lines 1768--1768
 [] 
  []
 
 [30]
-Overfull \hbox (9.95393pt too wide) in paragraph at lines 1764--1764
+Overfull \hbox (47.98108pt too wide) in paragraph at lines 1801--1801
 [] 
  []
 
 
-Overfull \hbox (34.98816pt too wide) in paragraph at lines 1777--1777
-[] 
- []
-
-[31]
-Overfull \hbox (35.92426pt too wide) in paragraph at lines 1812--1812
+Overfull \hbox (9.95393pt too wide) in paragraph at lines 1808--1808
 [] 
  []
 
 
-LaTeX Warning: Reference `thm2' on page 32 undefined on input line 1818.
+Overfull \hbox (34.98816pt too wide) in paragraph at lines 1821--1821
+[] 
+ []
 
-[32]
+[31] [32]
+Overfull \hbox (35.92426pt too wide) in paragraph at lines 1856--1856
+[] 
+ []
 
-./Article.tex:1888: LaTeX Error: Command \myboxa already defined.
+
+LaTeX Warning: Reference `thm2' on page 33 undefined on input line 1862.
+
+
+./Article.tex:1932: LaTeX Error: Command \myboxa already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 \newsavebox\myboxa
+l.1932 \newsavebox\myboxa
                          
 ? 
 
-./Article.tex:1889: LaTeX Error: Command \myboxb already defined.
+./Article.tex:1933: LaTeX Error: Command \myboxb already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1889 \newsavebox\myboxb
+l.1933 \newsavebox\myboxb
                          
 ? 
 
-./Article.tex:1890: LaTeX Error: Command \myboxc already defined.
+./Article.tex:1934: LaTeX Error: Command \myboxc already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1890 \newsavebox\myboxc
+l.1934 \newsavebox\myboxc
                          
 ? 
 
-./Article.tex:1891: LaTeX Error: Command \boxskeleton already defined.
+./Article.tex:1935: LaTeX Error: Command \boxskeleton already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1891 \newsavebox\boxskeleton
+l.1935 \newsavebox\boxskeleton
                               
 ? 
 
-./Article.tex:2063: LaTeX Error: Command \schemSubd already defined.
+./Article.tex:2107: LaTeX Error: Command \schemSubd already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2063 }
+l.2107 }
         
 ? 
 
-./Article.tex:2089: LaTeX Error: Command \elsing already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2089 }
-        
-? 
-
-./Article.tex:2098: LaTeX Error: Command \base already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2098 }
-        
-? 
-
-./Article.tex:2126: LaTeX Error: Command \schem already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2126 }
-        
-? 
-
-./Article.tex:2133: LaTeX Error: Command \schemd already defined.
+./Article.tex:2133: LaTeX Error: Command \elsing already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1508,106 +1463,158 @@ l.2133 }
         
 ? 
 
-./Article.tex:2157: LaTeX Error: Command \schema already defined.
+./Article.tex:2142: LaTeX Error: Command \base already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2157 }
+l.2142 }
         
 ? 
 
-./Article.tex:2178: LaTeX Error: Command \schemb already defined.
+./Article.tex:2170: LaTeX Error: Command \schem already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2178 }
+l.2170 }
         
 ? 
 
-./Article.tex:2204: LaTeX Error: Command \schemc already defined.
+./Article.tex:2177: LaTeX Error: Command \schemd already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2204 }
+l.2177 }
+        
+? 
+
+./Article.tex:2201: LaTeX Error: Command \schema already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2201 }
+        
+? 
+
+./Article.tex:2222: LaTeX Error: Command \schemb already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2222 }
+        
+? 
+
+./Article.tex:2248: LaTeX Error: Command \schemc already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2248 }
         
 ? 
 [33]
-
-LaTeX Warning: Citation `Bur05' on page 34 undefined on input line 2231.
-
-[34]
-
-LaTeX Warning: Citation `Bak65' on page 35 undefined on input line 2300.
-
-
-LaTeX Warning: Citation `Bur05' on page 35 undefined on input line 2300.
-
-[35]
-
-LaTeX Warning: Citation `Ghys09' on page 36 undefined on input line 2352.
-
-[36]
-Overfull \hbox (45.68932pt too wide) in paragraph at lines 2391--2393
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 2275--2276
+[]\OT1/cmr/m/n/10 -------------------------------------------------------------
+-----------------------------------
  []
 
 
-Overfull \hbox (25.59067pt too wide) in paragraph at lines 2438--2439
+LaTeX Warning: Citation `Bak65' on page 34 undefined on input line 2288.
+
+
+LaTeX Warning: Citation `Bur05' on page 34 undefined on input line 2288.
+
+[34]
+
+LaTeX Warning: Citation `Ghys09' on page 35 undefined on input line 2340.
+
+
+LaTeX Warning: Reference `eq:cheb-def' on page 35 undefined on input line 2342.
+
+
+
+Overfull \hbox (45.68932pt too wide) in paragraph at lines 2379--2381
+ [][] 
+ []
+
+[35]
+Overfull \hbox (25.59067pt too wide) in paragraph at lines 2426--2427
  [] 
  []
 
 
-LaTeX Warning: Citation `Sam95' on page 37 undefined on input line 2448.
+LaTeX Warning: Reference `eq:cheb-def' on page 36 undefined on input line 2432.
 
-[37] [38]
 
-LaTeX Warning: Reference `sec:chap4' on page 39 undefined on input line 2513.
 
-[39] [40] [41]
-Overfull \hbox (72.4418pt too wide) in paragraph at lines 2632--2632
+LaTeX Warning: Citation `Sam95' on page 36 undefined on input line 2436.
+
+[36]
+
+LaTeX Warning: Reference `eq:cheb-def' on page 37 undefined on input line 2440.
+
+
+[37]
+
+LaTeX Warning: Reference `sec:chap4' on page 38 undefined on input line 2501.
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 2517--2518
+[]\OT1/cmr/m/n/10 -------------------------------------------------------------
+-----------------------------------
+ []
+
+[39] [40]
+Overfull \hbox (72.4418pt too wide) in paragraph at lines 2653--2653
 [] 
  []
 
 
-LaTeX Warning: Citation `Bur05' on page 42 undefined on input line 2665.
+LaTeX Warning: Citation `Bur05' on page 41 undefined on input line 2686.
 
-[42]
+[41]
 
-LaTeX Warning: Citation `Bur05' on page 43 undefined on input line 2668.
+LaTeX Warning: Citation `Bur05' on page 42 undefined on input line 2689.
 
 
-Overfull \hbox (40.27446pt too wide) in paragraph at lines 2709--2710
+Overfull \hbox (40.27446pt too wide) in paragraph at lines 2730--2731
  [][] 
  []
 
 
-Overfull \hbox (40.27446pt too wide) in paragraph at lines 2723--2725
+Overfull \hbox (40.27446pt too wide) in paragraph at lines 2744--2746
  [][] 
  []
 
 
-Overfull \hbox (110.13097pt too wide) in paragraph at lines 2975--2976
+Overfull \hbox (110.13097pt too wide) in paragraph at lines 2996--2997
  [][] 
  []
 
 
-LaTeX Warning: Citation `Bur05' on page 43 undefined on input line 2979.
+LaTeX Warning: Citation `Bur05' on page 42 undefined on input line 3000.
 
-[43]
 
-LaTeX Warning: Citation `Bur05' on page 44 undefined on input line 2984.
+LaTeX Warning: Citation `Bur05' on page 42 undefined on input line 3005.
 
-[44] [45]
-Overfull \hbox (13.88025pt too wide) detected at line 3008
+[42] [43] [44]
+Overfull \hbox (13.88025pt too wide) detected at line 3029
 \OML/cmm/m/it/10 ^^X\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = (\OM
 L/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OML/cmm
 /m/it/10 ; ^^X[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )) = [] \OML
@@ -1615,73 +1622,72 @@ L/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OML/cmm
  []
 
 
-LaTeX Warning: Citation `Bur05' on page 46 undefined on input line 3016.
-
-[46]
-
-LaTeX Warning: Citation `Bur05' on page 47 undefined on input line 3048.
+LaTeX Warning: Citation `Bur05' on page 45 undefined on input line 3037.
 
 
-LaTeX Warning: Citation `Bur05' on page 47 undefined on input line 3052.
+LaTeX Warning: Citation `Bur05' on page 45 undefined on input line 3069.
 
-[47] [48] [49]
+[45]
 
-LaTeX Warning: Float too large for page by 79.37369pt on input line 3209.
+LaTeX Warning: Citation `Bur05' on page 46 undefined on input line 3073.
 
+[46] [47]
 
-Overfull \hbox (150.48286pt too wide) in paragraph at lines 3310--3311
+LaTeX Warning: Float too large for page by 79.37369pt on input line 3230.
+
+[48] [49]
+Overfull \hbox (150.48286pt too wide) in paragraph at lines 3331--3332
  [][] 
  []
 
-[50] [51] [52]
-Overfull \hbox (97.12143pt too wide) in paragraph at lines 3355--3356
+[50]
+Overfull \hbox (97.12143pt too wide) in paragraph at lines 3376--3377
  [] 
  []
 
-[53] [54] [55]
-Overfull \hbox (24.71211pt too wide) in paragraph at lines 3656--3657
+[51] [52] [53]
+Overfull \hbox (24.71211pt too wide) in paragraph at lines 3677--3678
  [] 
  []
 
 
-Overfull \hbox (24.71211pt too wide) in paragraph at lines 3671--3672
+Overfull \hbox (24.71211pt too wide) in paragraph at lines 3692--3693
  [] 
  []
 
-[56]
+[54]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3691.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3712.
 
- [57] [58]
-Overfull \hbox (29.43227pt too wide) detected at line 3801
+ [55] [56]
+Overfull \hbox (29.43227pt too wide) detected at line 3822
 [][] [] \OT1/cmr/m/n/10 = [][] [] + [][] \OML/cmm/m/it/10 K \OT1/cmr/m/n/10 = [
 ][] \OML/cmm/m/it/10 ^^T[] \OT1/cmr/m/n/10 + [] [][] \OML/cmm/m/it/10 K;
  []
 
 
-Overfull \hbox (20.33139pt too wide) in paragraph at lines 3898--3899
+Overfull \hbox (20.33139pt too wide) in paragraph at lines 3919--3920
  [][] 
  []
 
-[59]
-Overfull \hbox (48.37482pt too wide) in paragraph at lines 3924--3924
+[57]
+Overfull \hbox (48.37482pt too wide) in paragraph at lines 3945--3945
 [] 
  []
 
-[60]
-Overfull \hbox (13.95616pt too wide) in paragraph at lines 3938--3938
+[58]
+Overfull \hbox (13.95616pt too wide) in paragraph at lines 3959--3959
 [] 
  []
 
-[61]
-Underfull \hbox (badness 7116) in paragraph at lines 3994--3995
-[]\OT1/cmr/bx/n/10 Corollary 43 \OT1/cmr/m/n/10 (Ex-is-tence of piece-wise smoo
+[59] [60]
+Underfull \hbox (badness 7116) in paragraph at lines 4015--4016
+[]\OT1/cmr/bx/n/10 Corollary 40 \OT1/cmr/m/n/10 (Ex-is-tence of piece-wise smoo
 th Cheby-shev nets on
  []
 
-[62]
 No file Article.bbl.
-[63] (./Article.aux)
+[61] (./Article.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1690,10 +1696,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18521 strings out of 493027
- 386662 string characters out of 6134069
- 472206 words of memory out of 5000000
- 21700 multiletter control sequences out of 15000+600000
+ 18519 strings out of 493027
+ 386624 string characters out of 6134069
+ 474764 words of memory out of 5000000
+ 21698 multiletter control sequences out of 15000+600000
  17280 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,21n,72p,1498b,1255s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1728,10 +1734,10 @@ e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Article.pdf (63 pages, 613332 bytes).
+Output written on Article.pdf (61 pages, 607075 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 330 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

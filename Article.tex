@@ -249,7 +249,7 @@ outside a finite number of ball, arbitrarly small neighborhood of bifurcating po
 
 \begin{theorem}[Existence of a smooth Chebyshev net out of a finite
     number of balls]\label{thm:main_thm}
-  Let $\surf$ be a smooth complete immersion of the plane $\R^2$ in $\R^3$ satisfying
+Let $\surf$ be a smooth complete immersion of the plane $\R^2$ in $\R^3$ satisfying
 \begin{equation} \label{eq:cond-thm}
   \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
 \end{equation}
@@ -261,23 +261,28 @@ admits a smooth Chebyshev net where $B_i$ are disks centered at $p_i$ with arbit
 
 \section{Preliminaries}
 
-We consider a complete and simply connected immersed surface. Let 
-$ D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+$,
-and let $\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be
- two curves such that $\gamma_u(0)=\gamma_v(0)$, and forming an
+We consider $M$ complete and simply connected immersed surfaces. 
+In a first part we will be interested in the construction of T-net in a sector
+of $M$ bounded by two half line. More precisely, let $L_u,L_v\in\R_\ast^+$ and
+$\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be
+ two curves  such that $\gamma_u(0)=\gamma_v(0)$, and forming an
  interior angle $\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ at their
- intersection and exterior angle
- $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))$. For clarity of
- exposition, throughout this section, we consider a slightly different
- notion of Chebyshev net which will refer to mappings (not necessarily
- homeomorphisms) $\varphi:D\to\surf$ satisfying
+ intersection and exterior angle $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))$.
+
+We consider a slightly different notion of Chebyshev net which will refer to mappings (not necessarily
+ homeomorphisms) $\varphi: D=[0,L_u]\Times[0,L_v] \to\surf$ satisfying
 \begin{subequations}\label{eq:cheb-def-c3}
 \begin{align}\label{eq:cheb-def-c3a}
 |\partial_u \varphi|_g(u,v) = 1,\\
 |\partial_v \varphi|_g(u,v) = 1,\label{eq:cheb-def-c3b}
 \end{align}
 \end{subequations}
-for all $(u,v)\in D$. Furthermore, note that the orientation of the boundary curve $\gamma_v$ is reversed in this section to simplify the exposition. 
+for all $(u,v)\in D$. 
+
+{\bf  ""Furthermore, note that the orientation of the boundary curve $\gamma_v$ is reversed in this section to simplify the exposition."" ???}
+
+
+
 We prove in the sequel the existence and the uniqueness of a Chebyshev net $\varphi:D\to\surf$ verifying the Cauchy boundary conditions
 \begin{equation}\label{eq:cond-bord-c3}
 \begin{split}
@@ -285,10 +290,10 @@ We prove in the sequel the existence and the uniqueness of a Chebyshev net $\var
   \varphi(0,v)=\gamma_v(v),\quad\forall v\in[0,L_v].
 \end{split}
 \end{equation}
-Since $\surf$ is a plane immersion, and since $\int_\surf{K^+}<2\pi$
-and $\int_\surf{K^-}<\infty$, there exists a global bi-Lipschitz
-parametrization of $\surf$~\cite{Bonk03} and we identify
-$\surf=(\R^2,g)$ such that there exists $\Csurf>1$ such that for all $X\in\R^2$,
+In the following, $\surf$ is a finite total curvature immersed plane with $\int_\surf{K^+}<2\pi$
+and $\int_\surf{K^-}<\infty$. Hence there exists a global bi-Lipschitz
+parametrization $F: \R^2 \to \surf$~\cite{Bonk03} and if $g$ is the induced metric,
+for all $X\in\R^2$ there exists $\Csurf>1$ such that
 \begin{equation}\label{eq:equiv}
   \frac{1}{\Csurf}|X|\leq |X|_{g} \leq \Csurf|X|.
 \end{equation}
@@ -298,12 +303,16 @@ Following \cite{Ghys09}, we reformulate the problem of finding a Chebyshev net $
   \DUV \omega = -K(\varphi) \sin(\omega).
 \end{equation}
 Equivalently, $\omega$ satisfies the integrated form Gauss Bonnet formula of \eqref{eq:cond-integr} called the Hazzidakis formula
+
+{\bf  Signes de la formule et conventions de signes du parametrage}
 \begin{multline}  \label{eq:hazz-form}
  \omega(u,v) = \angle\big(\gamma_u'(0),\gamma_v'(0)\big) - \int_0^u \ko_u(s)ds +
   \int_{0}^v\ko_v(s)ds\\
  - \int_0^u\int_0^vK(\varphi(s,t))\sin\big[\omega(s,t)\big]ds~dt,
 \end{multline} 
 for all $(u,v)\in D$, with $\ko_u:[0,L_u]\to\R$ and $\ko_v:[0,L_v]\to\R$ the geodesic curvatures of $\gamma_u$ and $\gamma_v$ respectively (see Figure \ref{fig:hazz-primal-c4}). 
+
+
 \begin{figure}[!htp]
   \centering
   \begin{tikzpicture}[x=1cm,y=1cm]
@@ -761,14 +770,11 @@ We finally suppose that $\varphi[(\R^+)^2]\not\subset \sect$. Then, let $\tilde 
 
 }
 
-%We consider complete and simply connected surfaces $M$ with metric $g$. A Chebyshev net 
-%$\varphi:U\subset\R^2\to\varphi(U)\subset\surf$, with $U$ an open set, is a coordinate system satisfying
-%\begin{equation}\label{eq:cheb-def}
-%  |\DU\varphi|_g(u,v) = |\DV\varphi|_g(u,v) = 1,
-%\end{equation}
-%for all $(u,v)\in U$.
-%We construct in what follows Chebyshev nets with a finite set of conical singularities. 
-%The main result is the following theorem.
+
+
+
+%We construct in a second part Chebyshev nets with a finite set of conical singularities on surfaces with finite total 
+%negative curvature and total positive curvature lower than $2\pi$. The main result of this section is the following theorem.
 %\begin{theorem}[Existence of piecewise smooth Chebyshev nets with singularities]\label{thm:existence-cheb-net}
 %  Let $\surf$ be a smooth, complete, simply connected surface satisfying
 %\begin{equation} \label{eq:cond-thm2}
@@ -782,13 +788,11 @@ We finally suppose that $\varphi[(\R^+)^2]\not\subset \sect$. Then, let $\tilde 
 %The section is organized as follows. In Section \ref{subsec:Nhalf-surfaces}, we first consider the construction of Chebyshev nets on broken half-surfaces, defined to be half-surfaces with polygonal boundaries. We prove the existence of Chebyshev nets on broken half-surfaces under some condition on their total curvature in Theorem \ref{thm:cheb-half-surface}. Then, we show in Section \ref{subsec:splitting} that we can split surfaces satisfying \eqref{eq:cond-thm} into broken half-surfaces (Theorem \ref{thm:splitting-surf}), each of them satisfying the conditions of Theorem \ref{thm:cheb-half-surface}. Finally, we combine these two results to construct the Chebyshev net with conical singularities in Section \ref{subsec:cheb-net-sing} and we show that this Chebyshev net is piecewise smooth.
 
 
-
-
- First, unless explicitly mentioned, any curve $\eta:I\subset \R\to\surf$ we consider in what follows is arc-length parametrized, continuous on $I$, and piecewise smooth according to the following definition:
+In a second part, we will apply the construction on sectors to consider the case where the boundary curve of the sector $\eta:I\subset \R\to\surf$ we consider is arc-length parametrized, continuous on $I$, and piecewise smooth according to the following definition:
 \begin{definitionE}[Piecewise smooth curves]\label{def:piecewise}
   Let $\eta:I\subset \R\to\surf$ be a continuous curve. We say that the curve $\eta$ is \emph{piecewise smooth} if there exists a partition of $I$ in the form $\bigcup_{i=1}^{N+1} [a_{i-1},a_i]=I$, with $a_0<...<a_{N+1}$. Suppose moreover that $\eta$ restricted to $(a_{i-1},a_{i})$ is a smooth curve with all the derivatives having a finite limit from the right at $a_{i-1}$ and from the left at $a_{i}$, for all $i\in\{1,...,N+1\}$. We say that the curve $\eta$ is piecewise smooth.
 \end{definitionE}
- We denote $\angle(X,Y)\in(-\pi,\pi]$ the oriented angle (using the orientation of $\surf$) between the vectors $X$ and $Y$ in the tangent plane $T_p\surf$ at any point $p\in\surf$. We define the total positive and negative turn angle of continuous piecewise smooth curves (see \cite{Bur05}):
+We define the total positive and negative turn angle of continuous piecewise smooth curves (see \cite{Bur05}):
 \begin{definitionE}[Positive and negative turn angle $\tau_\pm$]
  Let $\eta:I\subset\R\to\surf$ be a continuous piecewise smooth curve on the partition of $I$ defined by $a_0<...<a_{N+1}$. Then, for all $i\in\{1,...,N+1\}$, let $\ko_i:[a_{i-1},a_{i}]\to\R$ be the geodesic curvature of $\eta\big|_{[a_{i-1},a_{i}]}$ defined by 
 \begin{equation*}
@@ -803,6 +807,13 @@ Let $\psi_i = \angle(\eta'(a_i^-),\eta'(a_i^+))$, for all $i\in\{1,...,N\}$. We 
 and we define the total \emph{turn angle} as $\tau(\eta) = \tau_+(\eta)-\tau_-(\eta)$. (Note that $\tau_{\pm}(\eta)$ are different from $(\tau(\eta))^\pm$.) We denote $\tau\big(\eta\big|_{[a,b]})$, with $a,b\in\R$ such that $a<b$, the restriction to $[a,b]$ of the total turn angle. Note that, if any, the pointwise turns at $a$ and $b$ are included.
 \end{definitionE}
 An illustration of the turn angle is presented in Figure \ref{fig:turn-angle}. Finally, we denote int($D$) the interior of any set $D$. 
+
+
+
+
+
+
+
 \begin{figure}[!htp]
   \centering
   \begin{tikzpicture}[x=2.cm,y=2.cm]
@@ -863,7 +874,40 @@ An illustration of the turn angle is presented in Figure \ref{fig:turn-angle}. F
 %  Using Theorem \ref{thm:exist-cond-integr-c5}, we infer that there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4} and the properties presented in the theorem.
 %Then, using the continuity of the angle distribution $\omega$ and $\omega(0,0)=\pi-\psi\in(0,\pi)$, we infer that there exists $\tilde L_1,\tilde L_2>0$ such that $\omega(u,v)\in(0,\pi)$ for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Hence, by Theorem \ref{thm:exist-cond-integr-c5}, the mapping $\varphi$ satisfies \eqref{eq:def-cheb3-c5} for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Then, in the same manner as in the proof of Lemma \ref{lem:homeo}, we obtain that $\varphi:(\R^+)^2\to\sect$ is a Chebyshev net. Suppose finally that $\tilde\varphi:(\R^+)^2\to\surf$ is a Chebyshev net satisfying the boundary conditions \eqref{eq:bound-cond-c4}. Then, using Property \ref{prop:hazz-form}, we obtain that the angle distribution $\tilde\omega:(\R^+)^2\to(0,\pi)$ defined by $\tilde\omega=\angle(\DU\tilde\varphi,\DV\tilde\varphi)(u,v)$, for all $(u,v)\in(\R^+)^2$, satisfies the Hazzidakis formula \eqref{eq:hazz2-c4}. We deduce from Theorem \ref{thm:exist-cond-integr-c5} that $\varphi=\tilde\varphi$. This concludes the proof.
 %\end{proof}
--------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Construction of a Chebyshev net from its angle distribution}\label{subsec:constr-param}
 We now prove that a Chebyshev net can be constructed uniquely from its angle distribution. We start by showing in Subsection \ref{subsec:construction} that the construction of curves from their geodesic curvature, initial point and initial tangent vector is a well-posed problem. We then define, following \cite{Ghys09}, the mapping $\I(\gamma,\omega)$ which, for given boundary curves $\gamma_u$ and $\gamma_v$, associates with any angle distribution $\omega$ satisfying the boundary conditions \eqref{eq:cond-bord-angle} the candidate Chebyshev net $\varphi$, with angle distribution $\omega$, satisfying the boundary conditions \eqref{eq:cond-bord-c3} (Subsection \ref{subsubsec:constr-param}). The parametrization $\varphi$ is constructed in such a way that the $v$-coordinate curves are arc-length parametrized curves with geodesic curvatures satisfying \eqref{eq:courb-geodb}. We moreover show the continuity of the mapping $\I$ with respect to the angle distribution and to the delimiting curves $\gamma_u$ and $\gamma_v$. In Subsection \ref{sec:reg-candidate}, we show that the candidate Chebyshev net $\varphi$ has improved regularity in the $u$-coordinate whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. Finally, in Subsection \ref{sec:reg-cheb}, we prove that $\varphi$ is indeed a Chebyshev net if $\omega$ satisfies the integrability condition and has a sufficient regularity.
 
@@ -2203,89 +2247,33 @@ using that the mapping \eqref{eq:app-J} is Lipschitz continuous (Proposition \re
 
 }
 -------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------
-\section{Introduction}
-We call {\em surface} a Riemannian 2-manifold, whose metric will be denoted $g$, and we consider complete, simply connected surfaces. 
-A Chebyshev net $\varphi:U\subset\R^2\to\varphi(U)\subset\surf$, with $U$ an open set, is a coordinate system satisfying
-\begin{equation}\label{eq:cheb-def}
-  |\DU\varphi|_g(u,v) = |\DV\varphi|_g(u,v) = 1,
-\end{equation}
-for all $(u,v)\in U$.
-We construct in what follows Chebyshev nets with a finite set of conical singularities on surfaces with finite total negative curvature and total positive curvature lower than $2\pi$. The main result of this section is the following theorem.
-\begin{theorem}[Existence of piecewise smooth Chebyshev nets with singularities]\label{thm:existence-cheb-net}
-  Let $\surf$ be a smooth, complete, simply connected surface satisfying
-\begin{equation} \label{eq:cond-thm2}
-  \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
-\end{equation}
-where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. %We set $N_{\max} = \frac{4}{\pi}\int_\surf K^-+4$.
-Then, there exists a piecewise smooth Chebyshev net with conical singularities \sloppy$\CC=\big(\{\halfP^i_e\}_{1\leq i\leq \Npol}, \{\varphi^i_e\}_{1\leq i\leq \Npol}, T)$, with $\Npol\leq \frac{4}{\pi}\int_\surf K^-+8$, on $\surf$.
-% $p_1,...,p_{\Nsing}$, with $\Nsing\leq N_{\max}$, of valence $n_1,...,n_{\Nsing}\in\{5,...,N_{\max}+4\}$ on $\surf$.
-\end{theorem}
-We highlight that the proof of the theorem is constructive. %Then, let us notice that the Chebyshev net with conical singularities constructed in Theorem \ref{thm:existence-cheb-net} induces a bi-Lipschitz mapping from the plane to $\surf$ \cite{Bur05}. As a result, this theorem is optimal for surfaces having a Gaussian curvature with constant sign \cite{Bonk03}.
-The section is organized as follows. In Section \ref{subsec:Nhalf-surfaces}, we first consider the construction of Chebyshev nets on broken half-surfaces, defined to be half-surfaces with polygonal boundaries. We prove the existence of Chebyshev nets on broken half-surfaces under some condition on their total curvature in Theorem \ref{thm:cheb-half-surface}. Then, we show in Section \ref{subsec:splitting} that we can split surfaces satisfying \eqref{eq:cond-thm} into broken half-surfaces (Theorem \ref{thm:splitting-surf}), each of them satisfying the conditions of Theorem \ref{thm:cheb-half-surface}. Finally, we combine these two results to construct the Chebyshev net with conical singularities in Section \ref{subsec:cheb-net-sing} and we show that this Chebyshev net is piecewise smooth.
 
-Before this, let us introduce some notation. First, unless explicitly mentioned, any curve $\eta:I\subset \R\to\surf$ we consider in what follows is arc-length parametrized, continuous on $I$, and piecewise smooth according to the following definition:
-\begin{definitionE}[Piecewise smooth curves]\label{def:piecewise}
-  Let $\eta:I\subset \R\to\surf$ be a continuous curve. We say that the curve $\eta$ is \emph{piecewise smooth} if there exists a partition of $I$ in the form $\bigcup_{i=1}^{N+1} [a_{i-1},a_i]=I$, with $a_0<...<a_{N+1}$. Suppose moreover that $\eta$ restricted to $(a_{i-1},a_{i})$ is a smooth curve with all the derivatives having a finite limit from the right at $a_{i-1}$ and from the left at $a_{i}$, for all $i\in\{1,...,N+1\}$. We say that the curve $\eta$ is piecewise smooth.
-\end{definitionE}
- We denote $\angle(X,Y)\in(-\pi,\pi]$ the oriented angle (using the orientation of $\surf$) between the vectors $X$ and $Y$ in the tangent plane $T_p\surf$ at any point $p\in\surf$. We define the total positive and negative turn angle of continuous piecewise smooth curves (see \cite{Bur05}):
-\begin{definitionE}[Positive and negative turn angle $\tau_\pm$]
- Let $\eta:I\subset\R\to\surf$ be a continuous piecewise smooth curve on the partition of $I$ defined by $a_0<...<a_{N+1}$. Then, for all $i\in\{1,...,N+1\}$, let $\ko_i:[a_{i-1},a_{i}]\to\R$ be the geodesic curvature of $\eta\big|_{[a_{i-1},a_{i}]}$ defined by 
-\begin{equation*}
-  \ko_i(s) = \langle \eta^{\prime\prime}(s), \eta^{\prime\perp}(s)\rangle_g,
-\end{equation*}
-with $\eta^{\prime\perp}(s)\in T_{\eta(s)}\surf$ the vector such that $\angle(\eta'(s),\eta^{\prime\perp}(s))=\frac{\pi}{2}$, for all $s\in [a_{i-1},a_{i}]$.
-Let $\psi_i = \angle(\eta'(a_i^-),\eta'(a_i^+))$, for all $i\in\{1,...,N\}$. We suppose that $-\pi<\psi_i<\pi$, for all $i\in\{1,...,N\}$. We define the total positive and negative \emph{turn angles} $\tau(\eta)$ by
-\begin{equation}\label{eq:int-curv}
-\tau_+(\eta) = \sum_{i=1}^{N+1}\int_{a_{i-1}}^{a_{i}}\ko_i^+ + \sum_{i=1}^N\psi_i^+,
-\quad \tau_-(\eta) = \sum_{i=1}^{N+1}\int_{a_{i-1}}^{a_{i}}\ko_i^- + \sum_{i=1}^N\psi_i^-,
-\end{equation}
-and we define the total \emph{turn angle} as $\tau(\eta) = \tau_+(\eta)-\tau_-(\eta)$. (Note that $\tau_{\pm}(\eta)$ are different from $(\tau(\eta))^\pm$.) We denote $\tau\big(\eta\big|_{[a,b]})$, with $a,b\in\R$ such that $a<b$, the restriction to $[a,b]$ of the total turn angle. Note that, if any, the pointwise turns at $a$ and $b$ are included.
-\end{definitionE}
-An illustration of the turn angle is presented in Figure \ref{fig:turn-angle}. Finally, we denote int($D$) the interior of any set $D$. 
-\begin{figure}[!htp]
-  \centering
-  \begin{tikzpicture}[x=2.cm,y=2.cm]
-    \pgfmathsetmacro{\RR}{1.5}
-    \pgfmathsetmacro{\del}{.5}
-    \pgfmathsetmacro{\th}{30}
-    \pgfmathsetmacro{\thh}{130}
-    \begin{scope}[rotate=-90]
-    \coordinate (A) at (0,0);
-    \draw (A) -- ++(\th:\RR+1.) coordinate (B);
-    \draw[thick,red,->] (A) -- ++(\th:.3);
-    \draw (B) arc[start angle=-40,delta angle=60,radius=1.5] coordinate (C);
-    \draw (C) -- ++(\thh:\RR) coordinate (D);
-    \draw (D) -- ++(150:\RR) coordinate (E);
 
-    \draw (A) node{$\times$};
-    \draw (B) node{$\times$};
-    \draw (C) node{$\times$};
-    \draw (D) node{$\times$};
-    \draw (E) node{$\times$};
-    
-    \draw ($(C)+(-110:.4)$) node{\Large$\eta$};
-    
-    \draw[thick,red,->] (E) -- ++(150:.3);
-    \draw[thick,red,->] (E) -- ++(\th:.3);
-    \draw[red,-latex] ($(E)+(\th:.2)$) arc[start angle=\th,delta angle=150-\th,radius=.2];
-    \draw[red] ($(E)+(90:.4)$) node{$\tau(\eta)$};
-    
-    \draw[dotted,thick] (B) -- ++(-130:\del);
-    \draw[latex-] ($(B)+(-130:.4)$) arc[start angle=-130,delta angle=-20,radius=.4];
-    \draw ($(B)+(-140:.56)$) node{$\psi_1$};
-    
-    \draw[dotted,thick] (C) -- ++(110:\del);
-    \draw[-latex] ($(C)+(110:.4)$) arc[start angle=110,delta angle=20,radius=.4];
-    \draw ($(C)+(120:.56)$) node{$\psi_2$};
-    
-    \draw[dotted,thick] (D) -- ++(130:\del);
-    \draw[-latex] ($(D)+(130:.4)$) arc[start angle=130,delta angle=20,radius=.4];
-    \draw ($(D)+(140:.56)$) node{$\psi_3$};
-    \end{scope}
-  \end{tikzpicture}
-  \caption{Illustration of the total turn angle $\tau(\eta)$}\label{fig:turn-angle}
-\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 
 \section{Chebyshev nets on broken half-surfaces} \label{subsec:Nhalf-surfaces}
 In order to construct a Chebyshev net on broken half-surfaces with $N\geq1$ vertices, we first restrict ourselves in Section \ref{subsubsec:cheb-sector} to the case of a sector, which corresponds to the case $N=1$. Then, in Section \ref{subsubsec:half-surfaces-to-sector}, we show that broken half-surfaces admit a Chebyshev parametrization as a particular piecewise smooth sector, under conditions on their total Gaussian curvature.
@@ -2524,6 +2512,39 @@ for all $(u,v)\in \tilde D$.
   Using Theorem \ref{thm:exist-cond-integr-c5}, we infer that there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4} and the properties presented in the theorem.
 Then, using the continuity of the angle distribution $\omega$ and $\omega(0,0)=\pi-\psi\in(0,\pi)$, we infer that there exists $\tilde L_1,\tilde L_2>0$ such that $\omega(u,v)\in(0,\pi)$ for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Hence, by Theorem \ref{thm:exist-cond-integr-c5}, the mapping $\varphi$ satisfies \eqref{eq:def-cheb3-c5} for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Then, in the same manner as in the proof of Lemma \ref{lem:homeo}, we obtain that $\varphi:(\R^+)^2\to\sect$ is a Chebyshev net. Suppose finally that $\tilde\varphi:(\R^+)^2\to\surf$ is a Chebyshev net satisfying the boundary conditions \eqref{eq:bound-cond-c4}. Then, using Property \ref{prop:hazz-form}, we obtain that the angle distribution $\tilde\omega:(\R^+)^2\to(0,\pi)$ defined by $\tilde\omega=\angle(\DU\tilde\varphi,\DV\tilde\varphi)(u,v)$, for all $(u,v)\in(\R^+)^2$, satisfies the Hazzidakis formula \eqref{eq:hazz2-c4}. We deduce from Theorem \ref{thm:exist-cond-integr-c5} that $\varphi=\tilde\varphi$. This concludes the proof.
 \end{proof}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Construction on a broken half-surface}\label{subsubsec:half-surfaces-to-sector}
 We now introduce broken half-surfaces which are defined to be half-surfaces with polygonal boundaries:

@@ -205,12 +205,12 @@ $\varphi : \Omega \subset \R^2 \mapsto M$, such that the two family of line are 
 and $v \to \varphi (u_0, v)$ with lines parametrized by arclength
 $$| \partial _u \varphi | = | \partial _v \varphi | =1.$$
 When $\omega (p)=0 [\pi]$, lines are tangent and the net is no more a local chart of the surface. Singularities at these points
-are of cuspidal type or shallow tails. This is well describe in a paper of E. Ghys \cite{ghys} introducing Chebyshev net on surfaces. It is not known
+are of cuspidal type or shallow tails. This is well describe in a paper of E. Ghys \cite{Ghys09} introducing Chebyshev net on surfaces. It is not known
 when there exists global T-net on compact or non compact surfaces. The angle function $\omega$ between the two family of lines appear in the metric
 of local coordinates
 $${\rm d}s^2={\rm d}u^2 +  2\cos \omega (u,v) {\rm d}u {\rm d}v + {\rm d}v^2$$
 and the Gauss equation is related to a Sine-Gordon type equation of hyperbolic type:
-$$\partial ^2 _{uv} \omega = -K(u,v) \sin 2 \omega (u,v).$$
+$$\partial ^2 _{uv} \omega = -K(u,v) \sin  \omega (u,v).$$
 Using Gauss Bonnet theorem which reformulate in Hazzidakis formula, it is known (see H. Hopf, \cite{HH}, Lemma 2.3) that Chebyschev
 coordinates may not exist on a simply connected surface with $|\int \int K dS | \geq 2 \pi$. 
 P. L. Chebyshev proved the local existence of his coordinates under an analyticity assumption. In this paper, beside the hyperbolicity property of
@@ -229,7 +229,7 @@ in the same point $p$. In this case, the bifurcation point is related to a "cros
  $p$ can be greater than 4 but we consider only finite number case.
 
 
- The first non local result has been proved by I. Ya. Bakelman. He  proved the existence of Chebyshev coordinates in any sector bounded by two orthogonal geodesics on a
+ The first non local result has been proved by I. Ya. Bakelman \cite{Bak65}. He  proved the existence of Chebyshev coordinates in any sector bounded by two orthogonal geodesics on a
  simply connected Aleksandrov surface under the condition that both the positive and negative integral curvatures, $\int K^+ dS$ and $\int K^- dS$ are less than $\pi /2$,   (where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$) but the net (And the surface) is not smooth. Much later, a similar result for smooth surfaces, was proved by S. L. Samelson and W. P. Dayawansa \cite{SamDaya}: under the same restriction on the curvature, they proved that on each simply connected complete smooth surface there exists a global smooth Chebyshev net. Their proof is analytical. It is well known that the existence problem for the Chebyshev coordinates can be reduced to the existence problem for a solution to a hyperbolic system of second-order partial differential equations. This system is solved in \cite{SamDaya}  by the method of a paper of Ladyzhenskaya and Shubov  \cite{Ladishenkaya}. Burago, Ivanov and Malev in \cite{burago} used Bakelman result in a sector decomposition of a surface described in a paper of Bonk and Lang \cite{bonk}. They find four sectors satisfying hypothesis of Bakelman where they construct non smooth Chebyshev net on simply connected smooth surface $M$ with  $\int K^{\pm} dS <2\pi$. Masson and Monasse in \cite{massonMonasse} improve the result of Samelson and Dayawansa by constructing smooth T-net for simply connected surfaces with $\int K^{\pm} dS <2\pi$ which is a sharp result by the lemma of H. Hopf.
 
 
@@ -261,11 +261,9 @@ admits a smooth Chebyshev net where $B_i$ are disks centered at $p_i$ with arbit
 
 \section{Preliminaries}
 
-Let 
-\begin{equation*}
-  D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+,
-\end{equation*}
- and let $\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be
+We consider a complete and simply connected immersed surface. Let 
+$ D=[0,L_u]\Times[0,L_v],\quad\text{with } L_u,L_v\in\R_\ast^+$,
+and let $\gamma_u:[0,L_u]\to\surf$ and $\gamma_v:[0,L_v]\to\surf$ be
  two curves such that $\gamma_u(0)=\gamma_v(0)$, and forming an
  interior angle $\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ at their
  intersection and exterior angle
@@ -289,19 +287,17 @@ We prove in the sequel the existence and the uniqueness of a Chebyshev net $\var
 \end{equation}
 Since $\surf$ is a plane immersion, and since $\int_\surf{K^+}<2\pi$
 and $\int_\surf{K^-}<\infty$, there exists a global bi-Lipschitz
-parametrization of $\surf$~\cite{Bonk03}. In the sequel, we identify
-$\surf=(\R^2,g)$. The metric $g$ satisfies the following property:
-there exists $\Csurf>1$ such that for all $X\in\R^2$,
+parametrization of $\surf$~\cite{Bonk03} and we identify
+$\surf=(\R^2,g)$ such that there exists $\Csurf>1$ such that for all $X\in\R^2$,
 \begin{equation}\label{eq:equiv}
   \frac{1}{\Csurf}|X|\leq |X|_{g} \leq \Csurf|X|.
 \end{equation}
-Unless explicitly mentioned, all the considered curves are assumed to be arc-length parametrized. In the sequel, $C$ and $\tilde C$ are two generic constants whose values can change at each occurrence and we will often explicit their dependence.
 
-Following \cite{Ghys09}, we reformulate the problem of finding a Chebyshev net $\varphi:D\to\surf$ as the problem of finding the angle distribution $\omega:D\to(0,\pi)$ between the coordinate curves defined by $\omega(u,v) = \angle(\DU\varphi, \DV\varphi)(u,v)$. With this purpose in mind, we observe that $\omega$ satisfies the following integrability condition (in the form of a modified Sine-Gordon equation) \cite{Ghys09}
+Following \cite{Ghys09}, we reformulate the problem of finding a Chebyshev net $\varphi:D\to\surf$ as the problem of finding the angle distribution $\omega:D\to(0,\pi)$ between the coordinate curves defined by $\omega(u,v) = \angle(\DU\varphi, \DV\varphi)(u,v)$. With this purpose in mind, we observe that $\omega$ satisfies the integrability condition (in the form of a modified Sine-Gordon equation) \cite{Ghys09}
 \begin{equation}  \label{eq:cond-integr}
   \DUV \omega = -K(\varphi) \sin(\omega).
 \end{equation}
-Equivalently, $\omega$ satisfies the integrated form of \eqref{eq:cond-integr} called the Hazzidakis formula
+Equivalently, $\omega$ satisfies the integrated form Gauss Bonnet formula of \eqref{eq:cond-integr} called the Hazzidakis formula
 \begin{multline}  \label{eq:hazz-form}
  \omega(u,v) = \angle\big(\gamma_u'(0),\gamma_v'(0)\big) - \int_0^u \ko_u(s)ds +
   \int_{0}^v\ko_v(s)ds\\
@@ -356,16 +352,15 @@ for all $(u,v)\in D$, where $\kop_u:D\to\R$ and $\kop_v:D\to\R$ are respectively
 \omega(0,v) &= \angle(\gamma_u'(0), \gamma_v'(0)) + \int_0^v\ko_v(s)\ds,\quad\forall v\in[0,L_v].
 \end{align}
 \end{subequations}
-We first show that we can associate to any angle distribution
+We will show that we can associate to any angle distribution
 $\omega:D\to(0,\pi)$ satisfying \eqref{eq:cond-bord-angle} a unique
 mapping $\varphi:=\I(\gamma,\omega):D\to\surf$ satisfying
 \eqref{eq:cheb-def-c3b}, \eqref{eq:cond-bord-c3}, and
 \eqref{eq:courb-geodb}. We then show that this mapping also satisfies
 \eqref{eq:cheb-def-c3a} and \eqref{eq:courb-geoda} whenever $\omega$
-satisfies the integrability condition \eqref{eq:cond-integr}. This
-section aims at proving the following result:
+satisfies the integrability condition \eqref{eq:cond-integr}. We prove the following result:
 
-\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2smooth}
+\begin{theorem}[Existence and uniqueness of smooth Chebyshev nets in a sector]\label{thm2smooth}
 Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$. Let
 $\gamma_u:\R^+\to\surf$ and $\gamma_v:\R^+\to\surf$ be two smooth
 curves with respective geodesic curvatures $\ko_u:\R^+\to\R$ and
@@ -386,46 +381,489 @@ $\varphi$ is a smooth Chebyshev net on $\Omega$ with angles
 $0<\omega<\pi$.
 \end{theorem}
 
-We in fact prove a slightly stronger version of Theorem
-\ref{thm2smooth}. Denote $\Phi^{r,k} =
-C^{r}([0,L_u],C^{k}([0,L_v],\R^2))$ the space of mappings of $D$ to
-$\R^2$ with $C^r$ regularity in the first variable and $C^k$
-regularity in the second variable. Similarly, define
-$\Theta^{r,k}=C^r([0,L_u],C^k([0,L_v],\R))$ the space of real
-functions on $D$ with $C^r$ regularity in the first variable and $C^k$
-regularity in the second variable. To simplify notations, set
-$\Phi^{k,k}=\Phi^k$ and $\Theta^{k,k}=\Theta^k$.
+\begin{proof}[Proof of Proposition \ref{prop:sector}]
+  Using Theorem \ref{thm:exist-cond-integr-c5}, we infer that there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4} and the properties presented in the theorem.
+Then, using the continuity of the angle distribution $\omega$ and $\omega(0,0)=\pi-\psi\in(0,\pi)$, we infer that there exists $\tilde L_1,\tilde L_2>0$ such that $\omega(u,v)\in(0,\pi)$ for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Hence, by Theorem \ref{thm:exist-cond-integr-c5}, the mapping $\varphi$ satisfies \eqref{eq:def-cheb3-c5} for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Then, in the same manner as in the proof of Lemma \ref{lem:homeo}, we obtain that $\varphi:(\R^+)^2\to\sect$ is a Chebyshev net. Suppose finally that $\tilde\varphi:(\R^+)^2\to\surf$ is a Chebyshev net satisfying the boundary conditions \eqref{eq:bound-cond-c4}. Then, using Property \ref{prop:hazz-form}, we obtain that the angle distribution $\tilde\omega:(\R^+)^2\to(0,\pi)$ defined by $\tilde\omega=\angle(\DU\tilde\varphi,\DV\tilde\varphi)(u,v)$, for all $(u,v)\in(\R^+)^2$, satisfies the Hazzidakis formula \eqref{eq:hazz2-c4}. We deduce from Theorem \ref{thm:exist-cond-integr-c5} that $\varphi=\tilde\varphi$. This concludes the proof.
+\end{proof}
 
-\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2}
-Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$. Let
-$k\in\mathbb{N}$. Let $\gamma_u:\R^+\to\surf$ and
-$\gamma_v:\R^+\to\surf$ be two curves with $C^{k+2}$ regularity, with
-respective geodesic curvatures $\ko_u:\R^+\to\R$ and
-$\ko_v:\R^+\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose
-that $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ and that
-the sector $\Omega$ delimited by $\gamma_u$ and $\gamma_v$
-verifies \[\int_{\gamma_u}{\ko_u^+} + \int_{\gamma_v}{\ko_v^-} +
-\int_{\Omega}{K^+}<\pi-\psi \text{ and } \int_{\gamma_u}{\ko_u^-} +
-\int_{\gamma_v}{\ko_v^+} + \int_{\Omega}{K^-}<\psi.\] Let
-$L_u,L_v\in\R_\ast^+\cup\{+\infty\}$ and
-$D=[0,L_u]\Times[0,L_v]$. Then, there exists a unique angle
-distribution $\omega\in \Theta^{k+1}$ verifying the boundary
-conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis
-formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega):
-D\to\surf$ the unique mapping satisfying \eqref{eq:cheb-def-c3b},
-\eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. The mapping
-$\varphi$ is a Chebyshev net with $\Phi^{k+2}$ regularity on $\Omega$
-with angles $0<\omega<\pi$.
-\end{theorem}
+%%Theoreme d'existence avec regularite
 
-\modif{Annonce du plan à retravailler}
+%We in fact prove a slightly stronger version of Theorem
+%\ref{thm2smooth}. Denote $\Phi^{r,k} =
+%C^{r}([0,L_u],C^{k}([0,L_v],\R^2))$ the space of mappings of $D$ to
+%$\R^2$ with $C^r$ regularity in the first variable and $C^k$
+%regularity in the second variable. Similarly, define
+%$\Theta^{r,k}=C^r([0,L_u],C^k([0,L_v],\R))$ the space of real
+%functions on $D$ with $C^r$ regularity in the first variable and $C^k$
+%regularity in the second variable. To simplify notations, set
+%$\Phi^{k,k}=\Phi^k$ and $\Theta^{k,k}=\Theta^k$.
+%
+%\begin{theorem}[Existence and uniqueness of Chebyshev nets]\label{thm2}
+%Let $\surf$ be a smooth immersion of the plane $\R^2$ in $\R^3$. Let
+%$k\in\mathbb{N}$. Let $\gamma_u:\R^+\to\surf$ and
+%$\gamma_v:\R^+\to\surf$ be two curves with $C^{k+2}$ regularity, with
+%respective geodesic curvatures $\ko_u:\R^+\to\R$ and
+%$\ko_v:\R^+\to\R$, and such that $\gamma_u(0) = \gamma_v(0)$. Suppose
+%that $\psi=\pi-\angle(\gamma_u'(0),\gamma_v'(0))\in(0,\pi)$ and that
+%Rthe sector $\Omega$ delimited by $\gamma_u$ and $\gamma_v$
+%verifies \[\int_{\gamma_u}{\ko_u^+} + \int_{\gamma_v}{\ko_v^-} +
+%\int_{\Omega}{K^+}<\pi-\psi \text{ and } \int_{\gamma_u}{\ko_u^-} +
+%\int_{\gamma_v}{\ko_v^+} + \int_{\Omega}{K^-}<\psi.\] Let
+%$L_u,L_v\in\R_\ast^+\cup\{+\infty\}$ and
+%$D=[0,L_u]\Times[0,L_v]$. Then, there exists a unique angle
+%distribution $\omega\in \Theta^{k+1}$ verifying the boundary
+%conditions \eqref{eq:cond-bord-angle} and satisfying the Hazzidakis
+%formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega):
+%D\to\surf$ the unique mapping satisfying \eqref{eq:cheb-def-c3b},
+%\eqref{eq:cond-bord-c3} and \eqref{eq:courb-geodb}. The mapping
+%$\varphi$ is a Chebyshev net with $\Phi^{k+2}$ regularity on $\Omega$
+%with angles $0<\omega<\pi$.
+%\end{theorem}
+%
+%\modif{Annonce du plan à retravailler}
+%
+%In order to prove Theorem \ref{thm2}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
+\begin{lemma}[Homeomorphism]\label{lem:homeo}
+  Let $\sect$ be a smooth sector delimited by the two smooth curves $\eta_1:\R^-\to\surf$ and $\eta_2:\R^+\to\surf$ intersecting at $p\in\surf$, and satisfying \eqref{eq:cond-primal}. Assume that $\varphi :(\R^+)^2\to \varphi[(\R^+)^2]\subset\surf$ is a smooth mapping satisfying \eqref{eq:cheb-def}, and such that $\varphi(u, 0) = \eta_2(u)$, $\varphi(0,v) = \eta_1(-v)$ for all $(u,v)\in(\R^+)^2$. Then, $\varphi : (\R^+)^2\to \sect$ is a homeomorphism.
+\end{lemma}
 
-In order to prove Theorem \ref{thm2}, we proceed along the following plan. In Section \ref{subsec:constr-param}, given the two curves $\gamma_u$ and $\gamma_v$ on $\surf$ and the angle distribution $\omega:D\to\R/2\pi\Z$ between the coordinate curves, we first construct the candidate Chebyshev net $\varphi=\I(\gamma,\omega):D\to\surf$. We then show that whenever $\varphi$ satisfies the integrability condition \eqref{eq:cond-integr}, this mapping also satisfies \eqref{eq:cheb-def-c3} under suitable regularity conditions.  In Section \ref{subsec:exist-pt-fixe}, we view the Hazzidakis formula \eqref{eq:hazz-form}, with $\varphi:=\I(\gamma,\omega)$, as a fixed-point problem on $\omega$. We show existence and uniqueness of the solution to this fixed-point equation for the curves $\gamma_u$ and $\gamma_v\big|_{[0,L_0]}:[0,L_0]\to\surf$, where $L_0\in(0,L_v]$ is a constant depending on the $C^0$-norm of the geodesic curvatures of $\gamma_u$ and $\gamma_v$. This result is called ``local existence'' in what follows. We finally extend this result to the curves $\gamma_u$ and $\gamma_v$ of arbitrary length, in the spirit of the Cauchy--Lipschitz theorem.
+\begin{proof}
+ The proof is obtained in the same manner as in \cite{Sam95}. We just recall here the principal ideas. We denote $\omega:(\R^+)^2\to\R/2\pi\Z$ the angle distribution defined by $\omega(u,v) = \angle(\DU\varphi,\DV\varphi)(u,v)$, for all $(u,v)\in (\R^+)^2$. We denote $\ko_1:\R^-\to\R$ and $\ko_2:\R^+\to\R$ the geodesic curvatures of $\eta_1$ and $\eta_2$ respectively. First, using \eqref{eq:courb-geod-u}, we obtain that 
+\begin{equation*}
+  \omega(u,0) = \omega(0,0) - \int_0^u\ko_2 = \pi-\psi-\int_0^u\ko_2,
+\end{equation*}
+for all $u\in\R^+$. Then, using hypothesis \eqref{eq:cond-primal}, we deduce that $\omega(u,0)\in(0,\pi)$, for all $u\in\R^+$. In the same manner, we obtain that $\omega(0,v) = \pi-\psi-\int_{-v}^0\ko_1\in(0,\pi)$, for all $v\in\R^+$. Hence, using the continuity of $\omega$, we infer that there exists $\tilde D=[0,l_1]\Times[0,l_2]\subset(\R^+)^2$, with $l_1,l_2\in\R^+_\ast$, such that $\omega(\tilde D)\subset(0,\pi)$. Since \eqref{eq:cheb-def} is satisfied, we infer that $\varphi\big|_{\tilde D}:\tilde D\to\varphi(\tilde D)\subset\surf$ is a local homeomorphism, so that, up to reducing $l_1$ and $l_2$, $\varphi$ is a homeomorphism. Moreover, since $\omega(\tilde D)\subset(0,\pi)$, we deduce that $\angle(\eta_2'(u),\DV\varphi(u,0))\in(0,\pi)$, for all $u\in[0,l_1]$, and $\angle(\eta_1'(-v),\DV\varphi(0,v))\in(0,\pi)$, for all $v\in[0,l_2]$. We conclude that, up to reducing $l_1$ and $l_2$, we have $\varphi(\tilde D)\subset \sect$.
 
-\section{Smoothing of a Chebyshev net with conical singularities}
-\modif{A FAIRE !}
+Reasoning by contradiction, we first suppose that $\varphi$ is not a homeomorphism. Let $U = [0,L_1)\Times [0,L_2)$ and $U_{\mathrm{cl}} = [0,L_1]\Times [0,L_2]$, with $L_1,L_2>0$,  be such that $\varphi\big|_{U} : U\to \varphi(U)\subset \surf$ is a homeomorphism and such that $\varphi\big|_{U_{\mathrm{cl}}}: U_{\mathrm{cl}}\to\varphi(U_{\mathrm{cl}})\subset\surf$ is not a homeomorphism. Using the Hazzidakis formula \eqref{eq:hazz} and hypothesis \eqref{eq:cond-primal}, we easily obtain that $\omega(U_\mathrm{cl})\subset (0,\pi)$. Hence, the mapping $\varphi\big|_{U_{\mathrm{cl}}}$ is a local homeomorphism.
+Now, suppose that there exist $(u_1,v_1),(u_2,v_2)\in(0,L_1]\Times\{L_2\}\cup\{L_1\}\Times(0,L_2]$ with $\varphi(u_1,v_1) = \varphi(u_2,v_2)$. Then, the two following cases are possible:
+\begin{itemize}
+\item case 1: $u_1=u_2=L_1$ or $v_1=v_2=L_2$. We only consider the first subcase, since the reasoning for the second subcase is similar. Then, assuming that $u_1=u_2=L_1$, one can see that the Gauss--Bonnet formula applied to the curve $\varphi(\{L_1\}\Times[v_1,v_2])$ is in contradiction with \eqref{eq:cond-primal}.
+\item case 2: $u_1\neq u_2$ and $v_1\neq v_2$. In this case, we can suppose, without loss of generality, that $v_1=L_2$ and $u_2=L_1$. Then, the Gauss--Bonnet formula applied to the curve $\varphi([u_1,L_1]\Times\{L_2\})\cup\varphi(\{L_1\}\Times[L_2,v_2])$ yields a contradiction with \eqref{eq:cond-primal}.
+\end{itemize}
+We finally suppose that $\varphi[(\R^+)^2]\not\subset \sect$. Then, let $\tilde U = [0,\tilde L_1)\Times [0,\tilde L_2)$, with $\tilde L_1,\tilde L_2>0$, be such that $\varphi(\tilde U)\subset\sect$ and such that there exists $(\tilde u,\tilde v)\in(0,\tilde L_1]\Times\{\tilde L_2\}\cup\{\tilde L_1\}\Times(0,\tilde L_2]$ with $\varphi(\tilde u,\tilde v)\in\partial \sect$. Then, $\varphi(\tilde u, \tilde v)\in\eta_1(\R^-)$ or $\varphi(\tilde u, \tilde v)\in\eta_2(\R^+)$ and we obtain again a contradiction between the Gauss--Bonnet formula and \eqref{eq:cond-primal}. This concludes the proof.
+\end{proof} 
+
+\newsavebox\myboxa
+\newsavebox\myboxb
+\newsavebox\myboxc
+\newsavebox\boxskeleton
+
+\begin{lrbox}{\boxskeleton}
+  \begin{tikzpicture}[x=0.7cm,y=1.cm]
+    \pgfmathsetmacro{\R}{0.7}
+    \pgfmathsetmacro{\RR}{1.4}
+    \pgfmathsetmacro{\pos}{0.5}
 
 
+    \coordinate (B) at (3,0);
+    \coordinate (B2) at (14,0);
+
+    \coordinate (C) at ($(B)+(0.66,2)$);
+    \coordinate (C2) at ($(B)+(2.25,6.75)$);
+    \coordinate (D) at ($(C)+(2,2)$);
+    \coordinate (D2) at ($(C)+(5,5)$);
+    \coordinate (E) at ($(D)+(5,1)$);
+    \coordinate (E2) at ($(D)+(8.75,1.75)$);
+
+    \draw (B) -- (B2) coordinate[pos=0.5] (BB) 
+    node[pos=\pos,anchor=north west,inner sep=1pt]{$\gamma_c^{1,1}$};
+
+    \coordinate (Z) at ($(BB)+(-1.,-3)$);
+    \coordinate (Z2) at ($(BB)+(-2.,-6.)$);
+    \coordinate (Y) at ($(Z)+(-9,-3)$);
+
+    \draw[dashed] (B2) -- ($(B2)+(2.5,0)$);
+    \draw (B) -- (C) node[pos=\pos,anchor=north west,inner sep=1pt]{$\gamma_c^{1,2}$};
+    \draw (C) -- (C2) node[pos=.8,anchor=east,inner sep=1pt]{$\gamma_c^{3,3}$};
+    \draw[dashed] (C2) -- ($(C2)+(0.5,1.5)$);
+    \draw (C) -- (D) node[pos=\pos,anchor=west,inner sep=1pt]{$\gamma_c^{1,3}{=}\gamma_c^{3,2}$};
+    \draw (D) -- (D2) node[pos=0.9,anchor=east,inner sep=3pt]{$\gamma_c^{2,2}{=}\gamma_c^{3,1}$};
+    \draw[dashed] (D2) -- ($(D2)+(1,1)$);
+    \draw (D) -- (E) node[pos=1.,anchor=north,inner sep=5pt]{$\gamma_c^{1,4}{=}\gamma_c^{2,1}$};
+    \draw (E) -- (E2);
+    \draw[dashed] (E2) -- ($(E2)+(2.,0.4)$);
+
+    % \draw (10,4.3) node{\Large$\sect_{1,0}$};
+    % \draw (11.5,4.3) node{\large$\sect^l_{1,1}$};
+    % \draw (6.5,6.5) node{\large$\sect^r_{1,1}$};
+    % \draw (11,6.5) node{$\sect^r_{1,2}$};
+    % \draw (11,2.3) node{\large$\sect^l_{1,2}$};
+
+  %  \draw (B) node[anchor=north east,inner sep=0pt]{$p_c^1$}; 
+  %  \draw (C) node[anchor=north west,inner sep=0pt]{$p_c^2$}; 
+  %  \draw (D) node[anchor=north west,inner sep=0pt]{$p_c^3$}; 
+    
+    \draw (B) node{$\times$};
+    \draw (C) node{$\times$}; 
+    \draw (D) node{$\times$};  
+
+    \draw (11.5,2.2) node{\large$\halfP_c^1$};
+
+    \draw (6.,5.8) node{\large$\halfP_c^3$};
+    \draw (12,6.8) node{\large$\halfP_c^2$};
+  \end{tikzpicture}
+\end{lrbox}
+
+\begin{lrbox}{\myboxa}
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\size}{2.5}
+    \pgfmathsetmacro{\del}{0.65}
+    \pgfmathsetmacro{\pos}{0.35}
+    \pgfmathsetmacro{\poss}{0.75}
+    \pgfmathsetmacro{\car}{0.25}
+
+    \coordinate (O) at (0,0);
+    \draw (O) node{$\times$}; 
+    \draw (O) node[anchor=north east, inner sep=1pt]{\footnotesize$(0,0)$}; 
+    \coordinate (A) at (0,\size);
+    \coordinate (B) at (\size,0);
+    % {\tiny$\backslash\backslash\backslash$}
+    \draw (O) -- (A)% node[pos=\pos,anchor=east]{$p_e^{2,1}$}
+    node[pos=\pos]{$\times$}  node[pos=\poss]{$\times$};
+  %  node[pos=2.*\pos/3.,anchor=west, inner sep=0pt]{\small$\gamma_e^{2,1}$}
+  %  node[pos=\poss,anchor=east]{$p_e^{3,1}$}
+  %  node[pos=(\pos+\poss)/2.,sloped]{\scriptsize$\backslash$} 
+  %  node[pos=0.95,sloped]{\scriptsize$\backslash\backslash$};
+    \draw (O) -- (B);% node[pos=0.5,anchor=north]{\small$\gamma_e^{1,1}$};
+    \draw[dashed] (B) -- ++(0:\del);
+    \draw[dashed] (A) -- ++(90:\del);
+    \draw (\size/2.+.3,\size/2.+.5) node{\large$\halfP^1_e$};
+    \draw ($(O)+(0:\car)$) -- +(90:\car) -- (0,\car);
+  \end{tikzpicture}
+\end{lrbox}
+
+\begin{lrbox}{\myboxb}
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\size}{2.5}
+    \pgfmathsetmacro{\del}{0.6}
+    \pgfmathsetmacro{\pos}{0.4}
+    \pgfmathsetmacro{\poss}{0.8}
+    \pgfmathsetmacro{\car}{0.25}
+
+    \coordinate (O) at (0,0);
+    \draw (O) node{$\times$}; 
+    \draw (O) node[anchor=north east, inner sep=1pt]{\footnotesize$(0,0)$}; 
+    \coordinate (A) at (0,\size);
+    \coordinate (B) at (\size,0);
+    % {\tiny$\backslash\backslash\backslash$}
+    \draw (O) -- (A);%  node[pos=(\pos+\poss)/2.,sloped]
+%    {\scriptsize$\backslash\backslash\backslash$};
+    \draw (O) -- (B);% node[pos=(\pos+\poss)/2.,sloped]
+ %   {\scriptsize$\backslash\backslash$};
+    \draw[dashed] (B) -- ++(0:\del);
+    \draw[dashed] (A) -- ++(90:\del);
+    
+    \draw ($(O)+(0:\car)$) -- +(90:\car) -- (0,\car);
+
+    \draw (\size/2.+.3,\size/2.+.5) node{\large$\halfP^2_e$};
+  \end{tikzpicture}
+\end{lrbox}
+
+\begin{lrbox}{\myboxc}
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\size}{2.5}
+    \pgfmathsetmacro{\del}{0.65}
+    \pgfmathsetmacro{\pos}{0.55}
+    \pgfmathsetmacro{\car}{0.25}
+
+    \coordinate (O) at (0,0);
+    \draw (O) node{$\times$}; 
+    \draw (O) node[anchor=north east, inner sep=1pt]{\footnotesize$(0,0)$}; 
+    \coordinate (A) at (0,\size);
+    \coordinate (B) at (\size,0);
+    % {\tiny$\backslash\backslash\backslash$}
+    \draw (O) -- (A); %node[pos=0.5,anchor=east, inner sep=0pt]{\small$\gamma_e^{6,1}$};
+    \draw (O) -- (B) %node[pos=\pos,anchor=north]{$p_e^{3,3}$}
+    node[pos=\pos]{$\times$};
+  %  node[pos=\pos/2.,sloped]{\scriptsize$\backslash$} 
+  %  node[pos=.5+\pos/2.,sloped]{\scriptsize$\backslash\backslash\backslash$};
+    \draw[dashed] (B) -- ++(0:\del);
+    \draw[dashed] (A) -- ++(90:\del);
+    \draw (\size/2.+.3,\size/2.+.5) node{\large$\halfP^3_e$};
+    \draw ($(O)+(0:\car)$) -- +(90:\car) -- (0,\car);
+  \end{tikzpicture}
+\end{lrbox}
+
+\newcommand{\schemSubd}{
+   \pgfmathsetmacro{\R}{0.7}
+    \pgfmathsetmacro{\RR}{1.4}
+    \coordinate (A) at (-8,0);
+    \coordinate (B) at (3,0);
+    \coordinate (B2) at (14,0);
+
+    \coordinate (C) at ($(B)+(0.66,2)$);
+    \coordinate (C2) at ($(B)+(2.25,6.75)$);
+    \coordinate (D) at ($(C)+(2,2)$);
+    \coordinate (D2) at ($(C)+(5,5)$);
+    \coordinate (E) at ($(D)+(5,1)$);
+    \coordinate (E2) at ($(D)+(8.75,1.75)$);
+
+    \draw (A) -- (B) coordinate[pos=0.5] (AA);
+    \draw[dashed] (A) -- ($(A)+(-3,0)$);
+    \draw (B) -- (B2) coordinate[pos=0.5] (BB);
+
+    \coordinate (Z) at ($(BB)+(-1.,-3)$);
+    \coordinate (Z2) at ($(BB)+(-2.,-6.)$);
+    \coordinate (Y) at ($(Z)+(-9,-3)$);
+    \coordinate (AAB) at ($(AA)+(-1.5,3.)$);
+    \coordinate (AAB2) at ($(AAB)+(-1.5,3.)$);
+    \coordinate (AAC) at ($(AAB)+(0,3.5)$);
+
+    \draw[dashed] (B2) -- ($(B2)+(4,0)$);
+    \draw (B) -- (C);
+    \draw (C) -- (C2);
+    \draw[dashed] (C2) -- ($(C2)+(0.5,1.5)$);
+
+    \draw (BB) -- (Z);
+    \draw (Z) -- (Z2);
+    \draw[dashed] (Z2) -- ($(Z2)+(-0.5,-1.5)$);
+
+}
+
+\newcommand{\elsing}[1]{
+  \begin{tikzpicture}[x=0.7cm,y=.7cm]
+    \pgfmathsetmacro{\size}{2.5}
+    \pgfmathsetmacro{\del}{0.65}
+    \pgfmathsetmacro{\pos}{0.55}
+    \pgfmathsetmacro{\car}{0.4}
+
+    \coordinate (O) at (0,0);
+    \ifnum#1=5
+
+    \else
+    \draw (O) node{$\times$}; 
+     \draw (O) node[anchor=north, inner sep=1pt]
+     {\footnotesize$\varphi^{-1}(p_2)$}; 
+     \fi
+    \coordinate (A) at (0,\size);
+    \coordinate (B) at (\size,0);
+    \draw (O) -- (A);
+    \draw (O) -- (B);
+    \draw[dashed] (B) -- ++(0:\del);
+    \draw[dashed] (A) -- ++(90:\del);
+    \draw ($(A)!.5!(B)$) node[anchor=south west,inner sep=0pt] {$\halfP_e^{#1}$};
+    \draw ($(O)+(0:\car)$) -- +(90:\car) -- (0,\car);
+  \end{tikzpicture}
+}
+\newcommand{\base}{
+  \draw (0,0) coordinate (a0) -- +(-60:1) coordinate (a1) 
+  node[pos=0.8,anchor=east, inner sep=5pt]{$\eta_1$}
+  -- ($(a1)+(-30:1)$) coordinate (a2) -- ($(a2)+(0:1)$) coordinate (a3) 
+  -- ($(a3)+(30:1)$) coordinate (a4) -- ($(a4)+(60:1)$) coordinate (a5)
+  node[pos=0.,anchor=north west, inner sep=0pt]{$\eta_2$};
+  \draw[dotted,thick] (0,0) -- +(120:0.3);
+  \draw[dotted,thick] (a5) -- +(60:0.3);
+}
+
+\newcommand{\schem}[1]{
+  \base
+  \draw (a1) -- ($(a1)+(0:1)$) coordinate (bt3) -- ($(bt3)+(30:1)$) coordinate (bt4) 
+  -- ($(bt4)+(60:0.7)$) coordinate (bt5);
+  \draw (bt3) -- (a3);
+  \draw (bt4) -- (a4);
+  \draw (bt3) -- ($(bt3)+(a0)-(a1)$) coordinate (az1);
+  \draw (bt4) -- ($(bt4)+(a0)-(a1)-(120:0.3)$) coordinate (az2);
+
+  \draw[dotted,thick] (az1) -- +(120:0.3);
+  \draw[dotted,thick] (az2) -- +(120:0.3);
+  \draw[dotted,thick] (bt5) -- +(60:0.3);
+  % \draw (bt5) -- (a5);
+  % \end{scope}
+  \draw (a2) node[anchor=north east, inner sep=1pt]{$p_2$};
+  \draw (a2) node{$\times$};
+  % \draw[dotted,thick] (4,0) -- +(120:0.3);
+  % \draw[dotted,thick] (a5)++(180:0.55) -- +(60:0.4);
+
+
+  \ifnum#1=1
+  \draw[align=center,decoration={brace,mirror,raise=10pt,amplitude=10pt},decorate]
+  ($(a0)+(-160:0.3)$) -- node[below left=17pt] {\small induction\\ on $N_1$} ($(a2)+(-160:0.3)$);
+  \draw[align=center,decoration={brace,mirror,raise=20pt,amplitude=10pt},decorate]
+  ($(a2)+(-50:0.2)$) -- node[below right=25pt] {\small induction\\ on $N_2$} ($(a5)+(-50:0.2)$);
+  \fi
+}
+\newcommand{\schemd}{
+  \schem{0}
+  \draw[dotted,thick] ($(az1)!.5!(a0)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(az1)!.5!(az2)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(bt5)!.5!(az2)$) -- +(90:0.3);
+  \draw[dotted,thick] ($(bt5)!.5!(a5)$) -- +(60:0.3);
+}
+
+\newcommand{\schema}{
+  \base
+  \draw (a3) node{$\times$};
+  \draw (a3) node[anchor=north, inner sep=2pt]{$p_3$};
+  \draw (a2) -- ($(a2)+(30:1)$) coordinate (ct4) -- ($(ct4)+(60:1.)$) coordinate (ct5);
+  \draw (ct4) -- (a4);
+  \draw[dotted,thick] (ct5) -- +(60:0.3);
+
+%  \draw (ct3) -- ($(ct3)+(a0)-(a1)$) coordinate (az1);
+  \draw (a1) -- ($(a1)+(a4)-(a3)$) coordinate (az2);
+  \draw (ct4) -- (az2);
+  \draw (az2) -- ($(az2)+(a0)-(a1)-(120:.25)$) coordinate (az4);
+  \draw[dotted,thick] (az4) -- +(120:0.3);
+
+  \draw (az2) -- ($(az2)+(a5)-(a4)-(60:.25)$) coordinate (az3);
+  \draw[dotted,thick] (az3) -- +(60:0.3);
+  \draw[dotted,thick] (a5)++(165:0.5) -- +(-120:0.4);
+
+  \draw[dotted,thick] ($(a0)!.5!(az4)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(az3)!.5!(az4)$) -- +(90:0.3);
+  \draw[dotted,thick] ($(ct5)!.5!(az3)$) -- +(60:0.3);
+  
+}
+
+\newcommand{\schemb}{
+  \base
+  \draw (a1) node{$\times$};
+  \draw (a1) node[anchor=north east, inner sep=1pt]{$p_1$};
+  \draw[dotted,thick] (a5) -- +(60:0.3);
+  
+  \draw (a2) -- ($(a2)+(120:1.5)$) coordinate (az0);
+  \draw (a3) -- ($(a3)+(120:1.5)$) coordinate (az1);
+  \draw (a4) -- ($(a4)+(120:1.1)$) coordinate (az2);
+  \draw[dotted,thick] (az0) -- +(120:0.3);
+  \draw[dotted,thick] (az1) -- +(120:0.3);
+  \draw[dotted,thick] (az2) -- +(120:0.3);
+  
+  \draw[dotted,thick] ($(az0)!.5!(az1)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(az1)!.5!(az2)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(a0)!.5!(az0)$) -- +(120:0.3);
+  \draw[dotted,thick] ($(a5)!.5!(az2)$) -- +(90:0.3);
+  % \draw (ht0) -- (a0);
+
+}
+\newcommand{\schemc}{
+  \draw[dotted,thick] (0,0) -- +(120:0.3);
+  \draw (0,0) coordinate (a0) -- +(-60:1) coordinate (a1) -- ($(a1)+(-30:1)$)
+  coordinate (a2) -- ($(a2)+(0:1)$) coordinate (a3) 
+  node[pos=0.1,anchor=north east, inner sep=2pt]{$\eta_1$} -- ($(a3)+(30:1)$) 
+  coordinate (a4) -- ($(a4)+(60:1)$) 
+  coordinate (a5) node[pos=0.5,anchor=north west, inner sep=2pt]{$\eta_2$};
+  \draw (a4) node{$\times$};
+  \draw (a4) node[anchor=north west, inner sep=1pt]{$p_4$};
+  \draw[dotted,thick] (a5) -- +(60:0.3);
+
+  \draw (a3)  -- ($(a3)+(60:1.5)$) coordinate (dt5);
+  % \draw (dt5) -- (a5);
+  \draw (a3)  -- ($(a3)+(60:1.5)$) coordinate (dt1);
+  % \draw (dt5) -- (a5);
+  \draw (a2)  -- ($(a2)+(60:1.5)$) coordinate (dt2);
+  \draw (a1)  -- ($(a1)+(60:1.1)$) coordinate (dt3);
+  \draw[dotted,thick] (dt1) -- +(60:0.3);
+  \draw[dotted,thick] (dt2) -- +(60:0.3);
+  \draw[dotted,thick] (dt3) -- +(60:0.3);
+  \draw[dotted,thick] ($(dt1)!.5!(dt2)$) -- +(60:0.3);
+  \draw[dotted,thick] ($(dt3)!.5!(dt2)$) -- +(60:0.3);
+  \draw[dotted,thick] ($(a0)!.5!(dt3)$) -- +(90:0.3);
+  \draw[dotted,thick] ($(a5)!.5!(dt1)$) -- +(60:0.3);
+
+}
+
+%We consider complete and simply connected surfaces $M$ with metric $g$. A Chebyshev net 
+%$\varphi:U\subset\R^2\to\varphi(U)\subset\surf$, with $U$ an open set, is a coordinate system satisfying
+%\begin{equation}\label{eq:cheb-def}
+%  |\DU\varphi|_g(u,v) = |\DV\varphi|_g(u,v) = 1,
+%\end{equation}
+%for all $(u,v)\in U$.
+%We construct in what follows Chebyshev nets with a finite set of conical singularities. 
+%The main result is the following theorem.
+%\begin{theorem}[Existence of piecewise smooth Chebyshev nets with singularities]\label{thm:existence-cheb-net}
+%  Let $\surf$ be a smooth, complete, simply connected surface satisfying
+%\begin{equation} \label{eq:cond-thm2}
+%  \int_{\surf}K^+<2\pi\quad\text{and}\quad\int_{\surf}K^-<\infty,
+%\end{equation}
+%where $K$ is the Gaussian curvature of $\surf$, $K^+=\max(K,0)$ and $K^-=\max(-K,0)$. %We set $N_{\max} = \frac{4}{\pi}\int_\surf K^-+4$.
+%Then, there exists a piecewise smooth Chebyshev net with conical singularities \sloppy$\CC=\big(\{\halfP^i_e\}_{1\leq i\leq \Npol}, \{\varphi^i_e\}_{1\leq i\leq \Npol}, T)$, with $\Npol\leq \frac{4}{\pi}\int_\surf K^-+8$, on $\surf$.
+% $p_1,...,p_{\Nsing}$, with $\Nsing\leq N_{\max}$, of valence $n_1,...,n_{\Nsing}\in\{5,...,N_{\max}+4\}$ on $\surf$.
+%\end{theorem}
+%We highlight that the proof of the theorem is constructive. %Then, let us notice that the Chebyshev net with conical singularities constructed in Theorem \ref{thm:existence-cheb-net} induces a bi-Lipschitz mapping from the plane to $\surf$ \cite{Bur05}. As a result, this theorem is optimal for surfaces having a Gaussian curvature with constant sign \cite{Bonk03}.
+%The section is organized as follows. In Section \ref{subsec:Nhalf-surfaces}, we first consider the construction of Chebyshev nets on broken half-surfaces, defined to be half-surfaces with polygonal boundaries. We prove the existence of Chebyshev nets on broken half-surfaces under some condition on their total curvature in Theorem \ref{thm:cheb-half-surface}. Then, we show in Section \ref{subsec:splitting} that we can split surfaces satisfying \eqref{eq:cond-thm} into broken half-surfaces (Theorem \ref{thm:splitting-surf}), each of them satisfying the conditions of Theorem \ref{thm:cheb-half-surface}. Finally, we combine these two results to construct the Chebyshev net with conical singularities in Section \ref{subsec:cheb-net-sing} and we show that this Chebyshev net is piecewise smooth.
+
+
+
+
+ First, unless explicitly mentioned, any curve $\eta:I\subset \R\to\surf$ we consider in what follows is arc-length parametrized, continuous on $I$, and piecewise smooth according to the following definition:
+\begin{definitionE}[Piecewise smooth curves]\label{def:piecewise}
+  Let $\eta:I\subset \R\to\surf$ be a continuous curve. We say that the curve $\eta$ is \emph{piecewise smooth} if there exists a partition of $I$ in the form $\bigcup_{i=1}^{N+1} [a_{i-1},a_i]=I$, with $a_0<...<a_{N+1}$. Suppose moreover that $\eta$ restricted to $(a_{i-1},a_{i})$ is a smooth curve with all the derivatives having a finite limit from the right at $a_{i-1}$ and from the left at $a_{i}$, for all $i\in\{1,...,N+1\}$. We say that the curve $\eta$ is piecewise smooth.
+\end{definitionE}
+ We denote $\angle(X,Y)\in(-\pi,\pi]$ the oriented angle (using the orientation of $\surf$) between the vectors $X$ and $Y$ in the tangent plane $T_p\surf$ at any point $p\in\surf$. We define the total positive and negative turn angle of continuous piecewise smooth curves (see \cite{Bur05}):
+\begin{definitionE}[Positive and negative turn angle $\tau_\pm$]
+ Let $\eta:I\subset\R\to\surf$ be a continuous piecewise smooth curve on the partition of $I$ defined by $a_0<...<a_{N+1}$. Then, for all $i\in\{1,...,N+1\}$, let $\ko_i:[a_{i-1},a_{i}]\to\R$ be the geodesic curvature of $\eta\big|_{[a_{i-1},a_{i}]}$ defined by 
+\begin{equation*}
+  \ko_i(s) = \langle \eta^{\prime\prime}(s), \eta^{\prime\perp}(s)\rangle_g,
+\end{equation*}
+with $\eta^{\prime\perp}(s)\in T_{\eta(s)}\surf$ the vector such that $\angle(\eta'(s),\eta^{\prime\perp}(s))=\frac{\pi}{2}$, for all $s\in [a_{i-1},a_{i}]$.
+Let $\psi_i = \angle(\eta'(a_i^-),\eta'(a_i^+))$, for all $i\in\{1,...,N\}$. We suppose that $-\pi<\psi_i<\pi$, for all $i\in\{1,...,N\}$. We define the total positive and negative \emph{turn angles} $\tau(\eta)$ by
+\begin{equation}\label{eq:int-curv}
+\tau_+(\eta) = \sum_{i=1}^{N+1}\int_{a_{i-1}}^{a_{i}}\ko_i^+ + \sum_{i=1}^N\psi_i^+,
+\quad \tau_-(\eta) = \sum_{i=1}^{N+1}\int_{a_{i-1}}^{a_{i}}\ko_i^- + \sum_{i=1}^N\psi_i^-,
+\end{equation}
+and we define the total \emph{turn angle} as $\tau(\eta) = \tau_+(\eta)-\tau_-(\eta)$. (Note that $\tau_{\pm}(\eta)$ are different from $(\tau(\eta))^\pm$.) We denote $\tau\big(\eta\big|_{[a,b]})$, with $a,b\in\R$ such that $a<b$, the restriction to $[a,b]$ of the total turn angle. Note that, if any, the pointwise turns at $a$ and $b$ are included.
+\end{definitionE}
+An illustration of the turn angle is presented in Figure \ref{fig:turn-angle}. Finally, we denote int($D$) the interior of any set $D$. 
+\begin{figure}[!htp]
+  \centering
+  \begin{tikzpicture}[x=2.cm,y=2.cm]
+    \pgfmathsetmacro{\RR}{1.5}
+    \pgfmathsetmacro{\del}{.5}
+    \pgfmathsetmacro{\th}{30}
+    \pgfmathsetmacro{\thh}{130}
+    \begin{scope}[rotate=-90]
+    \coordinate (A) at (0,0);
+    \draw (A) -- ++(\th:\RR+1.) coordinate (B);
+    \draw[thick,red,->] (A) -- ++(\th:.3);
+    \draw (B) arc[start angle=-40,delta angle=60,radius=1.5] coordinate (C);
+    \draw (C) -- ++(\thh:\RR) coordinate (D);
+    \draw (D) -- ++(150:\RR) coordinate (E);
+
+    \draw (A) node{$\times$};
+    \draw (B) node{$\times$};
+    \draw (C) node{$\times$};
+    \draw (D) node{$\times$};
+    \draw (E) node{$\times$};
+    
+    \draw ($(C)+(-110:.4)$) node{\Large$\eta$};
+    
+    \draw[thick,red,->] (E) -- ++(150:.3);
+    \draw[thick,red,->] (E) -- ++(\th:.3);
+    \draw[red,-latex] ($(E)+(\th:.2)$) arc[start angle=\th,delta angle=150-\th,radius=.2];
+    \draw[red] ($(E)+(90:.4)$) node{$\tau(\eta)$};
+    
+    \draw[dotted,thick] (B) -- ++(-130:\del);
+    \draw[latex-] ($(B)+(-130:.4)$) arc[start angle=-130,delta angle=-20,radius=.4];
+    \draw ($(B)+(-140:.56)$) node{$\psi_1$};
+    
+    \draw[dotted,thick] (C) -- ++(110:\del);
+    \draw[-latex] ($(C)+(110:.4)$) arc[start angle=110,delta angle=20,radius=.4];
+    \draw ($(C)+(120:.56)$) node{$\psi_2$};
+    
+    \draw[dotted,thick] (D) -- ++(130:\del);
+    \draw[-latex] ($(D)+(130:.4)$) arc[start angle=130,delta angle=20,radius=.4];
+    \draw ($(D)+(140:.56)$) node{$\psi_3$};
+    \end{scope}
+  \end{tikzpicture}
+  \caption{Illustration of the total turn angle $\tau(\eta)$}\label{fig:turn-angle}
+\end{figure}
+
+%--------------------------------------------------------------------
+%
+%Before proving this result, we recall a theorem proved in Section \ref{sec:chap4}.
+%\begin{theorem}[Existence of a unique solution to integrability condition]\label{thm:exist-cond-integr-c5}
+%Let $\surf$ be a smooth, open, complete, and simply connected surface. Let $\eta_1:\R^-\to\surf$ and $\eta_2:\R^+\to\surf$ be two smooth curves with respective geodesic curvatures $\ko_1:\R^-\to\R$ and $\ko_2:\R^+\to\R$, and such that $\eta_1(0) = \eta_2(0)$. Suppose that $\psi:=\angle(\eta_1'(0),\eta_2'(0))\in(0,\pi)$. Then, there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique smooth mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4}, and such that its $v$-coordinate curves are arc-length parametrized curves with a geodesic curvature $\kop_2:D\to\R$ satisfying $\kop_2(u,v) = \DV\omega(u,v)$, for all $(u,v)\in (\R^+)^2$.
+%
+%Suppose moreover that there exists $\tilde D=[0,\tilde L_2]\Times[0,\tilde L_1]$, with $\tilde L_1,\tilde L_2\in\R^+_\ast$, such that $0<\omega(u,v)<\pi$, for all $(u,v)\in \tilde D$. Then, the mapping $\varphi$ satisfies 
+%\begin{equation}\label{eq:def-cheb3-c5}
+%  |\DU\varphi|_g(u,v) = |\DV\varphi|_g(u,v)=1,
+%\end{equation}
+%for all $(u,v)\in \tilde D$.
+%\end{theorem}
+%\begin{proof}[Proof of Proposition \ref{prop:sector}]
+%  Using Theorem \ref{thm:exist-cond-integr-c5}, we infer that there exists a unique angle distribution $\omega:(\R^+)^2\to\R/2\pi\Z$ satisfying the Hazzidakis formula \eqref{eq:hazz2-c4}, with $\varphi:(\R^+)^2\to\surf$ the unique mapping satisfying the boundary conditions \eqref{eq:bound-cond-c4} and the properties presented in the theorem.
+%Then, using the continuity of the angle distribution $\omega$ and $\omega(0,0)=\pi-\psi\in(0,\pi)$, we infer that there exists $\tilde L_1,\tilde L_2>0$ such that $\omega(u,v)\in(0,\pi)$ for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Hence, by Theorem \ref{thm:exist-cond-integr-c5}, the mapping $\varphi$ satisfies \eqref{eq:def-cheb3-c5} for all $(u,v)\in[0,\tilde L_1]\Times[0,\tilde L_2]$. Then, in the same manner as in the proof of Lemma \ref{lem:homeo}, we obtain that $\varphi:(\R^+)^2\to\sect$ is a Chebyshev net. Suppose finally that $\tilde\varphi:(\R^+)^2\to\surf$ is a Chebyshev net satisfying the boundary conditions \eqref{eq:bound-cond-c4}. Then, using Property \ref{prop:hazz-form}, we obtain that the angle distribution $\tilde\omega:(\R^+)^2\to(0,\pi)$ defined by $\tilde\omega=\angle(\DU\tilde\varphi,\DV\tilde\varphi)(u,v)$, for all $(u,v)\in(\R^+)^2$, satisfies the Hazzidakis formula \eqref{eq:hazz2-c4}. We deduce from Theorem \ref{thm:exist-cond-integr-c5} that $\varphi=\tilde\varphi$. This concludes the proof.
+%\end{proof}
+-------------------------------------------------------------------------------------------------
 \section{Construction of a Chebyshev net from its angle distribution}\label{subsec:constr-param}
 We now prove that a Chebyshev net can be constructed uniquely from its angle distribution. We start by showing in Subsection \ref{subsec:construction} that the construction of curves from their geodesic curvature, initial point and initial tangent vector is a well-posed problem. We then define, following \cite{Ghys09}, the mapping $\I(\gamma,\omega)$ which, for given boundary curves $\gamma_u$ and $\gamma_v$, associates with any angle distribution $\omega$ satisfying the boundary conditions \eqref{eq:cond-bord-angle} the candidate Chebyshev net $\varphi$, with angle distribution $\omega$, satisfying the boundary conditions \eqref{eq:cond-bord-c3} (Subsection \ref{subsubsec:constr-param}). The parametrization $\varphi$ is constructed in such a way that the $v$-coordinate curves are arc-length parametrized curves with geodesic curvatures satisfying \eqref{eq:courb-geodb}. We moreover show the continuity of the mapping $\I$ with respect to the angle distribution and to the delimiting curves $\gamma_u$ and $\gamma_v$. In Subsection \ref{sec:reg-candidate}, we show that the candidate Chebyshev net $\varphi$ has improved regularity in the $u$-coordinate whenever $\omega$ satisfies the integrability condition \eqref{eq:cond-integr}. Finally, in Subsection \ref{sec:reg-cheb}, we prove that $\varphi$ is indeed a Chebyshev net if $\omega$ satisfies the integrability condition and has a sufficient regularity.
 
@@ -1764,7 +2202,8 @@ using that the mapping \eqref{eq:app-J} is Lipschitz continuous (Proposition \re
   \draw[dotted,thick] ($(a5)!.5!(dt1)$) -- +(60:0.3);
 
 }
-
+-------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 \section{Introduction}
 We call {\em surface} a Riemannian 2-manifold, whose metric will be denoted $g$, and we consider complete, simply connected surfaces. 
 A Chebyshev net $\varphi:U\subset\R^2\to\varphi(U)\subset\surf$, with $U$ an open set, is a coordinate system satisfying
@@ -3585,8 +4024,6 @@ Finally, the mapping $\varphi\big|_{\halfP^i_e}:\halfP^i_e\to\halfP^i_c\subset\h
   \end{equation*}
   Finally, the mapping $\varphi\big|_{\halfP^i_e}:\halfP^i_e\to\halfP^i_c\subset\halfP_c$, with $\halfP^i_c = \varphi(\halfP^i_e)$, is a diffeomorphism, for all $i\in\{1,...,\Npiece\}$.
 \end{theorem}
-
- 
 
 \bibliography{references}
 
